@@ -1,0 +1,74 @@
+.lg-hd {
+  background: var(--paper);
+}
+.lg-hd .dp-wrap {
+  padding: calc(104 * var(--u)) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: calc(24 * var(--u));
+}
+.lg-hd .upd {
+  font-size: calc(16 * var(--u));
+  line-height: 1.5;
+  color: rgba(18, 18, 20, 0.6);
+}
+.lg-hd br {
+  display: none;
+}
+.lg-sec {
+  background: #fff;
+  padding: calc(104 * var(--u)) 0;
+}
+.lg-body {
+  width: calc(800 * var(--u));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(48 * var(--u));
+}
+.lg-c {
+  display: flex;
+  flex-direction: column;
+  gap: calc(16 * var(--u));
+  scroll-margin-top: 96px;
+}
+.lg-c h2 {
+  font-weight: 600;
+  font-size: calc(24 * var(--u));
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+.lg-c p {
+  font-size: calc(18 * var(--u));
+  line-height: 1.5;
+  color: rgba(18, 18, 20, 0.72);
+}
+.lg-c a {
+  color: var(--blue);
+  font-weight: 500;
+}
+.lg-c a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 820px) {
+  .lg-hd .dp-wrap {
+    padding: 40px 0;
+    gap: 24px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .lg-hd br {
+    display: inline;
+  }
+  .lg-sec {
+    padding: 40px 0;
+  }
+  .lg-body {
+    width: auto;
+    gap: 24px;
+    margin: 0;
+  }
+}

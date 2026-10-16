@@ -1,0 +1,228 @@
+/* contact page */
+.ct .p-h2 .l.m {
+  display: none;
+}
+.cthero {
+  background: #fff;
+  padding-top: 55px;
+}
+.cthero .split {
+  display: flex;
+  min-height: calc(640 * var(--u));
+}
+.cthero .cp {
+  flex: 1;
+  min-width: 0;
+  background: var(--ink);
+  color: #fff;
+  padding: calc(96 * var(--u)) calc(120 * var(--u)) calc(96 * var(--u))
+    max(calc((100vw - 1440 * var(--u)) / 2), calc(240 * var(--u)));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: calc(24 * var(--u));
+}
+.cthero .p-lab {
+  color: #fff;
+}
+.cthero p {
+  width: calc(540 * var(--u));
+  font-size: calc(20 * var(--u));
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+.ctdirect {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8 * var(--u));
+  padding-top: calc(24 * var(--u));
+}
+.ctdirect small {
+  font: 400 calc(11 * var(--u)) / 1.3 "Geist Mono", monospace;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.ctdirect a {
+  font-weight: 500;
+  font-size: calc(20 * var(--u));
+  line-height: 1.4;
+  align-self: flex-start;
+  background: linear-gradient(currentColor, currentColor) 0 100%/0 1px no-repeat;
+  transition: background-size 0.45s var(--ease);
+}
+.ctdirect a:hover {
+  background-size: 100% 1px;
+}
+.cthero .ph {
+  width: 50%;
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  background: #e7e7e4;
+}
+.cthero .ph img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.ctmsg {
+  background: #fff;
+}
+.ctmsg .dp-wrap {
+  display: flex;
+  gap: calc(80 * var(--u));
+  align-items: flex-start;
+}
+.ctmsg .cp {
+  width: calc(520 * var(--u));
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 * var(--u));
+}
+.cttopics {
+  padding-top: calc(16 * var(--u));
+  border-top: 0;
+}
+.cttopics > div {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8 * var(--u));
+  padding: calc(24 * var(--u)) 0;
+  border-top: 1px solid rgba(18, 18, 20, 0.1);
+}
+.cttopics b {
+  font-weight: 500;
+  font-size: calc(20 * var(--u));
+  line-height: 1.4;
+}
+.cttopics p {
+  font-size: calc(16 * var(--u));
+  line-height: 1.5;
+  color: rgba(18, 18, 20, 0.72);
+}
+.cttopics a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(18, 18, 20, 0.3);
+}
+.cttopics a:hover {
+  color: var(--blue);
+  text-decoration-color: currentColor;
+}
+.ctform {
+  flex: 1;
+  min-width: 0;
+  background: var(--paper);
+  border-radius: calc(16 * var(--u));
+  padding: calc(48 * var(--u));
+}
+.ctform .dp-in.ta {
+  min-height: calc(144 * var(--u));
+}
+.ctform .dp-in.ta textarea {
+  min-height: calc(110 * var(--u));
+}
+.ctform .sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.ctform .dp-check {
+  max-width: 520px;
+}
+
+@media (max-width: 820px) {
+  .ct .p-h2 {
+    font-size: 32px;
+  }
+  .ct .p-h2 .l.d {
+    display: none;
+  }
+  .ct .p-h2 .l.m {
+    display: block;
+  }
+  .cthero {
+    padding-top: 64px;
+  }
+  .cthero .split {
+    flex-direction: column-reverse;
+    min-height: 0;
+  }
+  .cthero .ph {
+    width: 100%;
+    height: 250px;
+  }
+  .cthero .cp {
+    padding: 40px 24px;
+    gap: 24px;
+  }
+  .cthero h1 {
+    font-size: 40px;
+  }
+  .cthero p {
+    width: auto;
+    font-size: 18px;
+  }
+  .ctdirect {
+    padding-top: 0;
+  }
+  .ctdirect a {
+    font-size: 20px;
+  }
+  .ctmsg.dp-sec {
+    padding: 40px 0 0;
+  }
+  .ctmsg .dp-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+    margin: 0;
+  }
+  .ctmsg .cp {
+    width: auto;
+    padding: 0 24px;
+  }
+  .cttopics {
+    padding-top: 0;
+  }
+  .cttopics b {
+    font-size: 20px;
+  }
+  .cttopics p {
+    font-size: 16px;
+  }
+  .ctform {
+    border-radius: 0;
+    padding: 40px 24px;
+  }
+  .ctform .dp-in {
+    border-color: transparent;
+  }
+  .ctform .dp-in:focus-within {
+    border-color: var(--ink);
+  }
+  .ctform .dp-field.err .dp-in {
+    border-color: var(--err);
+  }
+  .ctform .sub {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ctform .dp-cap {
+    width: 100%;
+  }
+  .ctform .sub .p-btn {
+    justify-content: center;
+    font-size: 17px;
+    padding: 20px 28px;
+  }
+}

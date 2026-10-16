@@ -1,0 +1,462 @@
+.ab br.m {
+  display: none;
+}
+@media (max-width: 820px) {
+  .ab br.d {
+    display: none;
+  }
+  .ab br.m {
+    display: inline;
+  }
+}
+/* about page */
+.ab {
+  background: #fff;
+}
+.ab .p-h2 .l.m {
+  display: none;
+}
+.abhero {
+  position: relative;
+  margin-top: calc(72 * var(--u));
+  height: calc(800 * var(--u));
+  overflow: hidden;
+  background: #ede8df;
+  color: var(--ink);
+}
+.abhero > .p-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(-64 * var(--u));
+  height: calc(880 * var(--u));
+}
+.abhero > .p-img > picture {
+  position: absolute;
+  inset: 0;
+}
+.abhero > .p-img > picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+}
+.abhero > .p-img > video {
+  top: 0;
+  height: 100%;
+  object-position: 50% 50%;
+}
+.abhero .dp-wrap {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.abhero .cp {
+  margin-left: calc(12 * var(--u));
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 * var(--u));
+  align-items: flex-start;
+}
+.abhero h1 {
+  position: relative;
+  display: block;
+  color: var(--ink);
+}
+.abhero h1 .mask > span {
+  transition-delay: 0.1s;
+}
+.abhero h1 .mask:nth-child(2) > span {
+  transition-delay: 0.18s;
+}
+.abhero h1 .mask:nth-child(3) > span {
+  transition-delay: 0.26s;
+}
+.abhero p {
+  width: calc(402 * var(--u));
+  font-size: calc(20 * var(--u));
+  line-height: 1.5;
+  color: rgba(18, 18, 20, 0.72);
+}
+.absel {
+  position: absolute;
+  left: calc(-12 * var(--u));
+  top: 0;
+  width: calc(519 * var(--u));
+  height: calc(238 * var(--u));
+  border: 1.5px solid var(--blue);
+  pointer-events: none;
+}
+.absel i {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border: 1.5px solid var(--blue);
+  margin: -4.75px 0 0 -4.75px;
+}
+.absel i:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+.absel i:nth-child(2) {
+  left: 100%;
+  top: 0;
+}
+.absel i:nth-child(3) {
+  left: 0;
+  top: 100%;
+}
+.absel i:nth-child(4) {
+  left: 100%;
+  top: 100%;
+}
+.absel b {
+  position: absolute;
+  right: 0;
+  top: calc(-27 * var(--u));
+  padding: calc(4 * var(--u)) calc(6 * var(--u));
+  border-radius: calc(4 * var(--u));
+  background: var(--blue);
+  font: 500 calc(10 * var(--u)) / 1.3 "Geist Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.abstory {
+  background: #fff;
+}
+.abstory .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.abstory .bd {
+  padding-top: calc(56 * var(--u));
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 * var(--u));
+}
+.abstory .bd p {
+  width: calc(600 * var(--u));
+  font-size: calc(18 * var(--u));
+  line-height: 1.5;
+  color: rgba(18, 18, 20, 0.72);
+}
+
+.abrun {
+  background: var(--paper);
+}
+.abrun .dp-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: calc(56 * var(--u));
+}
+.abruler {
+  position: relative;
+  height: calc(40 * var(--u));
+  width: 100%;
+}
+.abruler .bl {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(18, 18, 20, 0.12);
+}
+.abruler .tk {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: calc(7 * var(--u));
+  background: rgba(18, 18, 20, 0.12);
+}
+.abruler .tk.mj {
+  height: calc(14 * var(--u));
+  background: rgba(18, 18, 20, 0.5);
+}
+.abruler em {
+  position: absolute;
+  top: calc(4 * var(--u));
+  font: 400 calc(11 * var(--u)) / 1.3 "Geist Mono", monospace;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  color: rgba(18, 18, 20, 0.5);
+  margin-left: calc(4 * var(--u));
+}
+.abruler .sm {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--blue);
+  transform-origin: 50% 100%;
+  transform: scaleY(0);
+  transition: transform 0.9s var(--ease) var(--d, 0s);
+}
+.abruler.on .sm {
+  transform: none;
+}
+.absteps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(48 * var(--u));
+}
+.abstep {
+  display: flex;
+  flex-direction: column;
+  gap: calc(16 * var(--u));
+}
+.abstep h3 {
+  font-weight: 600;
+  font-size: calc(24 * var(--u));
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+.abstep p {
+  font-size: calc(16 * var(--u));
+  line-height: 1.5;
+  color: rgba(18, 18, 20, 0.72);
+}
+
+.abbreak {
+  position: relative;
+  height: calc(560 * var(--u));
+  overflow: hidden;
+  background: #d9d4cc;
+}
+.abbreak .p-img {
+  position: absolute;
+  inset: 0;
+}
+.abbreak .p-img > img,
+.abbreak .p-img > video {
+  top: 0;
+  height: 100%;
+  object-position: 50% 50%;
+}
+
+.abhold {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  color: #fff;
+}
+.ab .iso {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='18.3' viewBox='0 0 96 18.3' preserveAspectRatio='none'%3E%3Cpath d='M0 0L96 18.3M0 18.3L96 0' stroke='%23fff' stroke-width='1' fill='none' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  background-size: calc(96 * var(--u)) calc(18.3 * var(--u));
+  opacity: 0.08;
+}
+.abhold .dp-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: calc(32 * var(--u));
+  align-items: flex-start;
+}
+.abhold .p-lab {
+  color: #fff;
+}
+.abhold .p-h2 {
+  color: #fff;
+}
+.abhold p {
+  width: calc(640 * var(--u));
+  font-size: calc(18 * var(--u));
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.abstudio {
+  display: flex;
+  background: #fff;
+  min-height: calc(760 * var(--u));
+}
+.abstudio .ph {
+  width: 50%;
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  background: #e9e4dc;
+}
+.abstudio .ph .p-img {
+  position: absolute;
+  inset: 0;
+}
+.abstudio .ph .p-img > img,
+.abstudio .ph .p-img > video {
+  top: 0;
+  height: 100%;
+  object-position: 50% 50%;
+}
+.abstudio .cp {
+  flex: 1;
+  padding: calc(104 * var(--u)) calc(240 * var(--u)) calc(104 * var(--u))
+    calc(120 * var(--u));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: calc(24 * var(--u));
+}
+.abstudio .p-h2 {
+  font-size: calc(48 * var(--u));
+}
+.abstudio p {
+  width: calc(480 * var(--u));
+  font-size: calc(18 * var(--u));
+  line-height: 1.5;
+  color: rgba(18, 18, 20, 0.72);
+}
+.abstudio .p-btn {
+  margin-top: calc(16 * var(--u));
+}
+
+@media (max-width: 820px) {
+  .ab .p-h2 {
+    font-size: 32px;
+  }
+  .ab .p-h2 .l.d {
+    display: none;
+  }
+  .ab .p-h2 .l.m {
+    display: block;
+  }
+  .abhero {
+    margin-top: 64px;
+    height: auto;
+    background: var(--ink);
+    color: #fff;
+  }
+  .abhero > .p-img {
+    position: relative;
+    top: 0;
+    height: 350px;
+    background: #ede8df;
+  }
+  .abhero > .p-img > video {
+    left: auto;
+    right: calc(min(0px, (100% - 408px) / 2));
+    top: 50%;
+    width: max(816px, 200%);
+    height: auto;
+    aspect-ratio: 2200/943;
+    transform: translateY(-50%) !important;
+  }
+  .absel {
+    display: none;
+  }
+  .abhero .dp-wrap {
+    height: auto;
+    display: block;
+    padding: 40px 0;
+  }
+  .abhero .cp {
+    margin: 0;
+    gap: 24px;
+  }
+  .abhero .p-lab {
+    color: #fff;
+  }
+  .abhero h1 {
+    color: #fff;
+    font-size: 40px;
+  }
+  .abhero h1 .mask {
+    display: inline;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+  }
+  .abhero h1 .mask > span {
+    display: inline;
+    transform: none;
+  }
+  .abhero p {
+    width: auto;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .abstory .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .abstory .bd {
+    padding-top: 0;
+  }
+  .abstory .bd p {
+    width: auto;
+    font-size: 18px;
+  }
+  .abrun .dp-wrap {
+    gap: 32px;
+  }
+  .abruler {
+    display: none;
+  }
+  .absteps {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .abstep {
+    padding: 8px 12px 8px 8px;
+    gap: 12px;
+  }
+  .abstep h3 {
+    font-size: 24px;
+  }
+  .abstep p {
+    font-size: 16px;
+  }
+  .abbreak {
+    height: 300px;
+  }
+  .abhold .dp-wrap {
+    gap: 32px;
+  }
+  .abhold p {
+    width: auto;
+    font-size: 18px;
+  }
+  .abhold .p-h2 .l {
+    display: inline;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+  }
+  .abhold .p-h2 .l > span {
+    display: inline;
+    transform: none;
+  }
+  .iso {
+    background-size: 96px 18.3px;
+  }
+  .abstudio {
+    flex-direction: column;
+    min-height: 0;
+  }
+  .abstudio .ph {
+    width: 100%;
+    height: 297px;
+  }
+  .abstudio .cp {
+    padding: 40px 24px;
+    gap: 24px;
+  }
+  .abstudio p {
+    width: auto;
+    font-size: 18px;
+  }
+  .abstudio .p-btn {
+    margin-top: 0;
+    font-size: 17px;
+    padding: 20px 28px;
+  }
+}

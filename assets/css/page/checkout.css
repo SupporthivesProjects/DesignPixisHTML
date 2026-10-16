@@ -1,0 +1,334 @@
+.fl-head {
+  background: var(--paper);
+  padding: calc(72 * var(--u)) 0 0;
+  text-align: center;
+}
+.fl-head .p-lab {
+  justify-content: center;
+}
+.fl-head h1 {
+  font-weight: 600;
+  font-size: calc(64 * var(--u));
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  margin-top: calc(24 * var(--u));
+}
+.fl-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(8 * var(--u));
+  margin-top: calc(24 * var(--u));
+}
+.fl-step {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(8 * var(--u));
+  padding: calc(8 * var(--u)) calc(16 * var(--u)) calc(8 * var(--u))
+    calc(8 * var(--u));
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--line12);
+  font-weight: 500;
+  font-size: calc(14 * var(--u));
+  line-height: 1.2;
+  color: rgba(18, 18, 20, 0.6);
+  transition: box-shadow 0.25s;
+}
+.fl-step em {
+  font: 500 calc(10 * var(--u)) "Geist Mono", monospace;
+  font-style: normal;
+  width: calc(22 * var(--u));
+  height: calc(22 * var(--u));
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(18, 18, 20, 0.08);
+}
+a.fl-step:hover {
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+.fl-step.cur {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: none;
+}
+.fl-step.cur em {
+  background: var(--blue);
+  color: #fff;
+}
+.fl-step.done {
+  color: var(--ink);
+}
+.fl-step.done em {
+  background: var(--ink);
+  color: #fff;
+}
+.fl-steps > i {
+  width: calc(24 * var(--u));
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.12;
+}
+.fl-steps .m {
+  display: none;
+}
+.fl-body {
+  background: var(--paper);
+  padding: calc(48 * var(--u)) 0 calc(104 * var(--u));
+}
+.co-form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 * var(--u));
+  width: calc(960 * var(--u));
+  margin: 0 auto;
+}
+.co-card {
+  background: #fff;
+  border-radius: calc(16 * var(--u));
+  padding: calc(48 * var(--u));
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 * var(--u));
+}
+.co-card h2 {
+  font-weight: 600;
+  font-size: calc(24 * var(--u));
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+.co-grp {
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 * var(--u));
+  padding-bottom: calc(16 * var(--u));
+}
+.co-line {
+  display: flex;
+  align-items: center;
+  gap: calc(16 * var(--u));
+}
+.co-line img {
+  width: calc(56 * var(--u));
+  height: calc(56 * var(--u));
+  border-radius: calc(8 * var(--u));
+  object-fit: cover;
+  flex: none;
+}
+.co-line .in {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(2 * var(--u));
+}
+.co-line .in b {
+  font-weight: 500;
+  font-size: calc(15 * var(--u));
+  line-height: 1.4;
+}
+.co-line .in small {
+  font-size: calc(13 * var(--u));
+  line-height: 1.4;
+  color: rgba(18, 18, 20, 0.6);
+}
+.co-line > b {
+  font-weight: 500;
+  font-size: calc(15 * var(--u));
+}
+.co-card hr {
+  border: 0;
+  height: 1px;
+  background: rgba(18, 18, 20, 0.1);
+}
+.co-disc {
+  display: flex;
+  gap: calc(12 * var(--u));
+  align-items: flex-end;
+}
+.co-disc .dp-field {
+  flex: 1;
+}
+.co-disc .p-btn {
+  padding: calc(20 * var(--u)) calc(28 * var(--u));
+  font-size: calc(17 * var(--u));
+  flex: none;
+}
+.co-ok {
+  font-size: calc(13 * var(--u));
+  line-height: 1.4;
+  color: var(--ok);
+  margin-top: -8px;
+}
+.co-ok.bad {
+  color: var(--err);
+}
+.co-tots {
+  display: flex;
+  flex-direction: column;
+  gap: calc(12 * var(--u));
+}
+.co-rw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.co-rw span {
+  font-size: calc(16 * var(--u));
+  line-height: 1.5;
+  color: rgba(18, 18, 20, 0.72);
+}
+.co-rw b {
+  font-weight: 500;
+  font-size: calc(15 * var(--u));
+}
+.co-rw .g {
+  color: var(--ok);
+}
+.co-rw.tot span {
+  font-weight: 500;
+  font-size: calc(20 * var(--u));
+  color: var(--ink);
+}
+.co-rw.tot b {
+  font-weight: 600;
+  font-size: calc(32 * var(--u));
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+.co-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(24 * var(--u));
+}
+.co-sub .p-btn {
+  padding: calc(29 * var(--u)) calc(28 * var(--u));
+  font-size: calc(17 * var(--u));
+  justify-content: center;
+}
+.co-note {
+  font-size: calc(13 * var(--u));
+  line-height: 1.4;
+  color: rgba(18, 18, 20, 0.6);
+}
+.co-pay {
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--u));
+}
+.co-pay .v svg {
+  display: block;
+  height: 9.5px;
+  width: auto;
+}
+.co-pay .v {
+  display: inline-flex;
+  align-items: center;
+  padding: calc(7 * var(--u)) calc(8 * var(--u));
+  border-radius: calc(4 * var(--u));
+  background: var(--ink);
+  color: #fff;
+  font: italic 700 calc(12 * var(--u)) / calc(16 * var(--u)) "Geist", sans-serif;
+  letter-spacing: 0.02em;
+}
+.co-pay .mc {
+  position: relative;
+  width: calc(34 * var(--u));
+  height: calc(22 * var(--u));
+}
+.co-pay .mc i {
+  position: absolute;
+  top: 0;
+  width: calc(22 * var(--u));
+  height: calc(22 * var(--u));
+  border-radius: 50%;
+}
+/* kit note: kit.css puts its desktop field scaling before the base .dp-in rules, so it never applies; restated here at higher specificity */
+@media (min-width: 821px) {
+  .dp-page .dp-field {
+    gap: calc(8 * var(--u));
+  }
+  .dp-page .dp-field > label {
+    font-size: max(12px, calc(14 * var(--u)));
+  }
+  .dp-page .dp-in {
+    min-height: max(42px, calc(58 * var(--u)));
+    padding: 0 calc(20 * var(--u));
+    border-radius: calc(8 * var(--u));
+    gap: calc(12 * var(--u));
+  }
+  .dp-page .dp-in input,
+  .dp-page .dp-in select {
+    font-size: max(13px, calc(16 * var(--u)));
+    padding: calc(16 * var(--u)) 0;
+  }
+  .dp-page .dp-field .msg {
+    font-size: max(12px, calc(13 * var(--u)));
+  }
+  .dp-page .dp-check {
+    font-size: max(13px, calc(15 * var(--u)));
+  }
+}
+@media (max-width: 820px) {
+  .fl-head {
+    text-align: left;
+  }
+  .fl-head .p-lab {
+    justify-content: flex-start;
+  }
+  .fl-head {
+    padding: 40px 24px 0;
+  }
+  .fl-head h1 {
+    font-size: 40px;
+    margin-top: 24px;
+  }
+  .fl-step {
+    padding: 8px 12px 8px 8px;
+  }
+  .fl-steps > i {
+    display: none;
+  }
+  .fl-steps .d {
+    display: none;
+  }
+  .fl-steps .m {
+    display: inline;
+  }
+  .fl-body {
+    padding: 40px 0 0;
+  }
+  .co-form {
+    width: auto;
+    gap: 24px;
+  }
+  .co-card {
+    border-radius: 0;
+    padding: 32px 24px;
+    gap: 24px;
+  }
+  .co-grp {
+    padding-bottom: 0;
+  }
+  .co-line {
+    align-items: flex-start;
+  }
+  .co-disc {
+    gap: 8px;
+  }
+  .co-rw.tot b {
+    font-size: 24px;
+  }
+  .co-sub {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+  .co-sub .dp-cap {
+    width: 100%;
+  }
+  .co-sub .p-btn {
+    padding: 20px 28px;
+  }
+}
