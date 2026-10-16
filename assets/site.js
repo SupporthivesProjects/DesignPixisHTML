@@ -735,7 +735,7 @@
         orders,
         library,
         fmtDate,
-        // requireAuth,
+        requireAuth,
         nextUrl,
         toast,
         popup,
