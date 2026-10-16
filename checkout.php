@@ -1,4 +1,15 @@
 <?php include 'includes/header.php'; ?>
+
+<style>
+h1{
+  margin-bottom: 0px;
+}
+
+.dp-page{
+  min-height: auto;
+}
+</style>
+
 <main class="dp-page">
   <section class="fl-head">
     <div class="p-lab">
