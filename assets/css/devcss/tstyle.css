@@ -1,0 +1,80 @@
+.desktop_nonet {
+    display: none;
+}
+
+.mobile_nonet {
+    display: block;
+}
+
+.diff_colort {
+    border-radius: 16px !important;
+    background: var(--brand-paper, hsl(232deg 20% 95.098%)) !important;
+}
+
+.tirthak_fullt h1,
+.tirthak_fullt h2,
+.tirthak_fullt h3,
+.tirthak_fullt h4,
+.tirthak_fullt h5,
+.tirthak_fullt h6,
+.tirthak_fullt p {
+    margin-bottom: 0;
+}
+
+.tirthak_fullt .dp-side .who small {
+    opacity: .25;
+}
+
+.tirthak_fullt .dp-side nav a::before,
+.tirthak_fullt .dp-side nav button::before {
+    background: transparent;
+}
+
+.for_pending_download {
+    box-shadow: inset 0 0 0 1px #E9A21B !important;
+}
+
+@media only screen and (max-width: 700px) {
+    .mobile_nonet {
+        display: none;
+    }
+
+    .desktop_nonet {
+        display: block;
+    }
+
+    .for_margin_zerot {
+        margin: 0px !important;
+    }
+
+    .different_stylest {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .different_stylest h2,
+    .different_stylest p {
+        text-wrap: unset;
+    }
+
+}
+
+@media only screen and (min-width: 780px) and (max-width:991px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1151px) {}
+
+@media only screen and (min-width: 1152px) and (max-width:1279px) {}
+
+@media only screen and (min-width: 1280px) and (max-width:1348px) {}
+
+@media only screen and (min-width: 1349px) and (max-width:1439px) {}
+
+@media only screen and (min-width: 1440px) and (max-width:1499px) {}
+
+@media only screen and (min-width: 1500px) and (max-width:1599px) {}
+
+@media only screen and (min-width: 1600px) and (max-width:1699px) {}
+
+@media only screen and (min-width: 1700px) and (max-width:1799px) {}
+
+@media only screen and (min-width: 1800px) and (max-width:1919px) {}
