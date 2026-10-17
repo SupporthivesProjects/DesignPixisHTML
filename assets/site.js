@@ -253,13 +253,13 @@
     };
 
     /* gate: checkout needs an account */
-    function requireAuth() {
-        if (!user.get()) {
-            location.replace('sign-in.html?next=' + encodeURIComponent(location.pathname.split('/').pop() + location.search));
-            return false
-        }
-        return true
-    }
+    // function requireAuth() {
+    //     if (!user.get()) {
+    //         location.replace('sign-in.html?next=' + encodeURIComponent(location.pathname.split('/').pop() + location.search));
+    //         return false
+    //     }
+    //     return true
+    // }
 
     function nextUrl(def) {
         const n = qs('next');
