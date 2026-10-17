@@ -152,6 +152,7 @@
     })();
     </script>
     <!-- --------store page------ -->
+    
   
 <!-- ------------about------------- -->
  <script>
@@ -199,70 +200,10 @@
 })();
  </script>
 <!-- -----------------product-details---------------------- -->
+ 
+ <!-- -----------cart------------------ -->
 
- <!-- -----------account------------------ -->
-  <script>
-    (function() {
-    if (!DP.requireAuth()) return;
-    document.querySelectorAll('[data-signout]').forEach(b => b.addEventListener('click', () => {
-        DP.user.signOut();
-        location.href = 'index.html'
-    }));
-    const u = DP.user.get();
-    const fd = document.getElementById('fd'),
-        fp = document.getElementById('fp');
-    const $ = id => document.getElementById(id);
-    $('name').value = ((u.first || '') + ' ' + (u.last || '')).trim();
-    $('email').value = u.email || '';
-    $('company').value = u.company || '';
-    $('address').value = u.address || '';
-    $('address2').value = u.address2 || '';
-    $('city').value = u.city || '';
-    $('postcode').value = u.postcode || '';
-    if (u.country) {
-        const s = $('country');
-        if (![...s.options].some(o => o.value === u.country)) s.add(new Option(u.country));
-        s.value = u.country
-    }
-    fd.addEventListener('submit', e => {
-        e.preventDefault();
-        if (!DP.validate(fd)) return;
-        const parts = $('name').value.trim().split(/\s+/);
-        DP.user.update({
-            first: parts[0],
-            last: parts.slice(1).join(' '),
-            email: $('email').value.trim(),
-            company: $('company').value.trim(),
-            address: $('address').value.trim(),
-            address2: $('address2').value.trim(),
-            city: $('city').value.trim(),
-            postcode: $('postcode').value.trim(),
-            country: $('country').value
-        });
-        DP.popup({
-            heading: 'Details saved',
-            body: 'Your next invoice will use these details.',
-            button: {
-                label: 'Done',
-                onClick: () => {}
-            }
-        })
-    });
-    fp.addEventListener('submit', e => {
-        e.preventDefault();
-        if (!DP.validate(fp)) return;
-        fp.reset();
-        DP.popup({
-            heading: 'Password updated',
-            body: 'Use your new password next time you sign in.',
-            button: {
-                label: 'Done',
-                onClick: () => {}
-            }
-        })
-    });
-})();
-  </script>
+
 
 
 </body>
