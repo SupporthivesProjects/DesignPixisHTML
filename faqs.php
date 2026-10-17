@@ -1,5 +1,15 @@
 <?php include 'includes/header.php'; ?>
 
+<style>
+  html,
+    body {
+      overflow-x: clip
+    }
+    .fqans .dp-sec {
+      overflow: visible;
+    }
+</style>
+
 <main class="fq">
   <section class="fqhero">
     <div class="iso" aria-hidden="true"></div>
