@@ -5,7 +5,7 @@
     body {
       overflow-x: clip
     }
-    .fqans .dp-sec {
+    .fqans.dp-sec {
       overflow: visible;
     }
 </style>
