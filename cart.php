@@ -7,6 +7,9 @@ h1{
 .dp-page{
   min-height: auto;
 }
+hr{
+  margin: 0px
+}
 </style>
 
 <main class="dp-page">

@@ -4,9 +4,11 @@
 h1{
   margin-bottom: 0px;
 }
-
 .dp-page{
   min-height: auto;
+}
+hr{
+  margin: 0px
 }
 </style>
 
