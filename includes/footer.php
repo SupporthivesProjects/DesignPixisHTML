@@ -152,154 +152,7 @@
     })();
     </script>
     <!-- --------store page------ -->
-    <script>
-    (function() {
-    const COUNTS = {
-        '': 113,
-        ebooks: 57,
-        video: 26,
-        software: 24,
-        templates: 5,
-        audiobooks: 1
-    };
-    const CHIPS = [
-        ['', 'All'],
-        ['ebooks', 'E-books'],
-        ['video', 'Video courses'],
-        ['software', 'Software'],
-        ['templates', 'Templates'],
-        ['audiobooks', 'Audiobooks']
-    ];
-    const mob = matchMedia('(max-width:820px)');
-    const $ = s => document.querySelector(s);
-    let cat = DP.qs('cat') || '';
-    if (!(cat in COUNTS)) cat = '';
-    let page = Math.max(1, parseInt(DP.qs('page') || '1', 10) || 1);
-    let q = '',
-        sort = 'pop';
-
-    /* hero window: the first three resources */
-    $('#mock').innerHTML = DP.CAT.slice(0, 3).map(p => `<a class="st-it" href="product.html?id=${p.id}"><span class="cv"><img src="${DP.cover(p)}" alt="${DP.esc(p.name)}">${DP.pill(p)}</span><span class="mt"><b>${DP.esc(p.name)}</b><span>${DP.money(p.price)}</span></span></a>`).join('');
-
-    $('#chips').innerHTML = CHIPS.map(([k, l]) => `<button class="dp-chip" role="tab" data-cat="${k}">${l}<small>${COUNTS[k]}</small></button>`).join('');
-
-    function sorted(list) {
-        const l = list.slice();
-        if (sort === 'low') l.sort((a, b) => a.price - b.price);
-        else if (sort === 'high') l.sort((a, b) => b.price - a.price);
-        else if (sort === 'name') l.sort((a, b) => a.name.localeCompare(b.name, 'en-GB', {
-            numeric: true
-        }));
-        return l
-    }
-
-    function url() {
-        const u = new URLSearchParams();
-        if (cat) u.set('cat', cat);
-        if (page > 1) u.set('page', page);
-        const s = u.toString();
-        history.replaceState(null, '', 'store.html' + (s ? '?' + s : ''))
-    }
-
-    function render() {
-        const per = mob.matches ? 6 : 15;
-        const total = COUNTS[cat];
-        const base = sorted(DP.CAT.filter(p => !cat || p.cat === cat));
-        const pages = Math.max(1, Math.ceil(total / per));
-        if (page > pages) page = pages;
-        let items, shown;
-        if (q) {
-            const t = q.toLowerCase();
-            items = base.filter(p => p.name.toLowerCase().includes(t));
-            shown = items.length
-        } else {
-            items = DP.rotate(Math.max(0, Math.min(per, total - (page - 1) * per)), page - 1, base);
-            shown = items.length
-        }
-        const g = $('#grid');
-        g.innerHTML = items.length ? items.map((p, i) => DP.card(p, i)).join('') : `<p class="st-empty" style="grid-column:1/-1">Nothing matches "${DP.esc(q)}". <button type="button" id="clr">Clear the search</button></p>`;
-        const c = $('#clr');
-        if (c) c.addEventListener('click', () => {
-            $('#q').value = '';
-            q = '';
-            render();
-            $('#q').focus()
-        });
-        DP.pixeliseAll(g);
-        DP.reveal(g);
-        $('#showing').textContent = q ? `Showing ${shown} of ${shown} resource${shown===1?'':'s'}` : `Showing ${shown} of ${total} resource${total===1?'':'s'}`;
-        document.querySelectorAll('#chips .dp-chip').forEach(b => {
-            const on = b.dataset.cat === cat;
-            b.classList.toggle('cur', on);
-            b.setAttribute('aria-selected', on)
-        });
-        document.querySelectorAll('.st-tabs a').forEach(a => a.classList.toggle('cur', (new URL(a.href).searchParams.get('cat') || '') === cat));
-        $('#cat').value = cat;
-        pag(q ? 1 : pages);
-    }
-
-    function pag(pages) {
-        const n = $('#pag');
-        const list = [];
-        if (pages <= 5) {
-            for (let i = 1; i <= pages; i++) list.push(i)
-        } else if (page <= 3) list.push(1, 2, 3, '…', pages);
-        else if (page >= pages - 2) list.push(1, '…', pages - 2, pages - 1, pages);
-        else list.push(1, '…', page, '…', pages);
-        n.innerHTML = list.map(i => i === '…' ? '<span class="gap" aria-hidden="true">…</span>' : `<button data-p="${i}"${i===page?' class="cur" aria-current="page"':''} aria-label="Page ${i}">${i}</button>`).join('') + `<button class="p-btn p-b2 p-bs" data-p="${page+1}"${page>=pages?' disabled':''}>Next</button>`;
-        DP.pixeliseAll(n);
-    }
-
-    function go(p) {
-        page = p;
-        url();
-        render();
-        const t = $('#catalogue');
-        if (t.getBoundingClientRect().top < 0) t.scrollIntoView({
-            block: 'start'
-        })
-    }
-    $('#pag').addEventListener('click', e => {
-        const b = e.target.closest('[data-p]');
-        if (b && !b.disabled) go(+b.dataset.p)
-    });
-    $('#chips').addEventListener('click', e => {
-        const b = e.target.closest('[data-cat]');
-        if (!b) return;
-        cat = b.dataset.cat;
-        page = 1;
-        url();
-        render()
-    });
-    $('#cat').addEventListener('change', e => {
-        cat = e.target.value;
-        page = 1;
-        url();
-        render()
-    });
-    $('#sort').addEventListener('change', e => {
-        sort = e.target.value;
-        render()
-    });
-    $('#q').addEventListener('input', e => {
-        q = e.target.value.trim();
-        render()
-    });
-    document.querySelectorAll('.st-tabs a').forEach(a => a.addEventListener('click', e => {
-        e.preventDefault();
-        cat = new URL(a.href).searchParams.get('cat') || '';
-        page = 1;
-        url();
-        render();
-        $('#catalogue').scrollIntoView({
-            block: 'start',
-            behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
-        })
-    }));
-    mob.addEventListener('change', render);
-    render();
-})();
-</script>
+  
 <!-- ------------about------------- -->
  <script>
     (function() {
@@ -346,45 +199,70 @@
 })();
  </script>
 <!-- -----------------product-details---------------------- -->
- <script>
+
+ <!-- -----------account------------------ -->
+  <script>
     (function() {
-    const FORMAT = {
-        video: 'MP4 video',
-        ebooks: 'PDF and EPUB',
-        software: 'WordPress plugin, ZIP',
-        templates: 'WordPress theme',
-        audiobooks: 'MP3 and MP4'
-    };
-    const id = DP.qs('id') || '001';
-    const p = DP.byId(id);
-    if (!p) {
-        location.replace('404.html');
-        return
+    if (!DP.requireAuth()) return;
+    document.querySelectorAll('[data-signout]').forEach(b => b.addEventListener('click', () => {
+        DP.user.signOut();
+        location.href = 'index.html'
+    }));
+    const u = DP.user.get();
+    const fd = document.getElementById('fd'),
+        fp = document.getElementById('fp');
+    const $ = id => document.getElementById(id);
+    $('name').value = ((u.first || '') + ' ' + (u.last || '')).trim();
+    $('email').value = u.email || '';
+    $('company').value = u.company || '';
+    $('address').value = u.address || '';
+    $('address2').value = u.address2 || '';
+    $('city').value = u.city || '';
+    $('postcode').value = u.postcode || '';
+    if (u.country) {
+        const s = $('country');
+        if (![...s.options].some(o => o.value === u.country)) s.add(new Option(u.country));
+        s.value = u.country
     }
-    const c = DP.CATS[p.cat];
-    const $ = s => document.querySelector(s);
-    document.title = p.name + ' | DesignPixis';
-    $('#crumb').innerHTML = `<a href="store.html">Store</a><i>/</i><a href="store.html?cat=${p.cat}">${c.plural}</a><i>/</i><span aria-current="page">${DP.esc(p.name)}</span>`;
-    $('#cv').innerHTML = `<img src="${DP.cover(p)}" alt="${DP.esc(p.name)} cover">${DP.pill(p)}`;
-    $('#nm').textContent = p.name;
-    $('#ab').textContent = p.intro || p.about[0];
-    $('#pr').textContent = DP.money(p.price);
-    $('#rows').innerHTML = `<div class="r"><span>Format</span><b>${FORMAT[p.cat]}</b></div><div class="r"><span>Category</span><b>${c.label}</b></div><div class="r"><span>Delivery</span><a href="account-library.html">Download from your library</a></div>`;
-    const add = $('#add');
-    add.dataset.add = p.id;
-    if (DP.cart.has(p.id)) {
-        add.classList.add('added');
-        add.querySelector('span').textContent = 'In cart'
-    }
-    const i = DP.CAT.indexOf(p) % 4;
-    $('#rel').innerHTML = DP.rotate(5, i, DP.CAT.filter(x => x.id !== p.id)).map((x, k) => DP.card(x, k)).join('');
-    DP.pixeliseAll($('#rel'));
-    DP.reveal();
+    fd.addEventListener('submit', e => {
+        e.preventDefault();
+        if (!DP.validate(fd)) return;
+        const parts = $('name').value.trim().split(/\s+/);
+        DP.user.update({
+            first: parts[0],
+            last: parts.slice(1).join(' '),
+            email: $('email').value.trim(),
+            company: $('company').value.trim(),
+            address: $('address').value.trim(),
+            address2: $('address2').value.trim(),
+            city: $('city').value.trim(),
+            postcode: $('postcode').value.trim(),
+            country: $('country').value
+        });
+        DP.popup({
+            heading: 'Details saved',
+            body: 'Your next invoice will use these details.',
+            button: {
+                label: 'Done',
+                onClick: () => {}
+            }
+        })
+    });
+    fp.addEventListener('submit', e => {
+        e.preventDefault();
+        if (!DP.validate(fp)) return;
+        fp.reset();
+        DP.popup({
+            heading: 'Password updated',
+            body: 'Use your new password next time you sign in.',
+            button: {
+                label: 'Done',
+                onClick: () => {}
+            }
+        })
+    });
 })();
- </script>
- <!-- -----------cart------------------ -->
-
-
+  </script>
 
 
 </body>

@@ -1,0 +1,53 @@
+@media (min-width: 821px) {
+    .p-nav nav {
+        height: calc(73 * var(--u));
+    }
+}
+.p-nav nav {
+    height: 73px;
+}
+header .p-nav {
+    background: var(--brand-white-82, rgba(255, 255, 255, 0.82));
+    backdrop-filter: blur(6px);
+}
+.p-nav nav {
+    display: flex;
+    gap: 4px;
+}
+.p-nav nav a{
+    color: var(--brand-black, #121214);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    opacity: 0.75;
+}
+.p-nav .right-side a{
+    color: var(--brand-black, #121214);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.p-nav .right-side a.acct{
+    color: var(--brand-black, #121214);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.p-nav .right-side a.ct{
+    color: var(--base-white, #FFF);
+    font-family: Geist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+.header{
+    height:  revert-rule;
+}
