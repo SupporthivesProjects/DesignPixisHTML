@@ -1,6 +1,7 @@
 <?php include 'includes/header.php'; ?>
+
 <main class="ct">
-  <section class="cthero">
+  <section class="cthero con_out">
     <div class="split">
       <div class="cp">
         <div class="p-lab p-rv">
@@ -23,7 +24,7 @@
     </div>
   </section>
   <section class="ctmsg dp-sec">
-    <div class="dp-wrap">
+    <div class="dp-wrap con_out2">
       <div class="cp">
         <div class="p-lab p-rv">
           <i></i>Send a message
@@ -57,7 +58,7 @@
           </div>
         </div>
       </div>
-      <form class="ctform dp-form p-rv" id="msgForm" novalidate>
+      <form class="ctform dp-form p-rv cont_form" id="msgForm" novalidate>
         <div class="dp-row">
           <div class="dp-field">
             <label for="mName">Full name</label>
@@ -124,10 +125,30 @@
               <small>Privacy · Terms</small>
             </div>
           </div>
-          <button type="submit" class="p-btn p-b1">Send message</button>
+          <button type="button" class="p-btn p-b1" data-bs-toggle="modal" data-bs-target="#exampleModal">Send message</button>
         </div>
       </form>
     </div>
   </section>
 </main>
- <?php include 'includes/footer.php'; ?>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content cont_modal">
+        <div class="cont_modal_tick">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" viewBox="0 0 25 18" fill="none">
+                <path d="M1.19922 9.19995L8.19922 16.2L23.1992 1.19995" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+            </svg>
+        </div>
+        <div class="cont_modal_div">
+            <h2 class="cont_modal_h2">Message sent</h2>
+            <p class="cont_modal_p">Thanks, John. We read every message and reply from hello@designpixis.com.</p>
+        </div>
+        <button type="button" class="p-btn p-b1" data-bs-toggle="modal">Back to the store</button>
+
+    </div>
+  </div>
+</div>
+  
+<?php include 'includes/footer.php'; ?>
