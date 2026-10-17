@@ -57,6 +57,14 @@ html.smooth #smooth{position:fixed;left:0;top:0;will-change:transform}
 .p-bs{padding:calc(8*var(--u)) calc(16*var(--u));font-size:calc(14*var(--u));gap:calc(6*var(--u))}
 .p-bs svg{width:calc(14*var(--u));height:calc(14*var(--u))}
 
+.p-b1:hover{
+  background: var(--brand-black, #121214);
+  color: #FFFFFF;
+}
+
+.p-b2:hover{
+  background: var(--brand-black, #121214);
+}
 /* wave clip targets */
 .js_clip,.js_wave{will-change:clip-path}
 
