@@ -307,6 +307,14 @@ html.smooth #smooth {
   height: calc(14 * var(--u));
 }
 
+.p-b1:hover{
+  background: var(--brand-black, #121214);
+  color: #FFFFFF;
+}
+
+.p-b2:hover{
+  background: var(--brand-black, #121214);
+}
 /* wave clip targets */
 .js_clip,
 .js_wave {
