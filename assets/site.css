@@ -2792,7 +2792,7 @@ button.p-btn {
 /* desktop chrome scales with the 1920 frame, like the homepage hero nav */
 @media (min-width: 821px) {
   .p-nav {
-    height: calc(72 * var(--u));
+    height: 72px;
   }
   .dp-page {
     padding-top: calc(72 * var(--u));
