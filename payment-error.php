@@ -1,4 +1,20 @@
 <?php include 'includes/header.php'; ?>
+
+<style>
+h1{
+  margin-bottom: 0px;
+}
+.dp-page{
+  min-height: auto;
+  background: var(--brand--paper);
+}
+hr{
+  margin: 0px
+}
+.pc-copy .p-rv.on{
+  margin: 0px;
+}
+</style>
 <main class="dp-page">
   <section class="pc">
     <div class="pc-copy">

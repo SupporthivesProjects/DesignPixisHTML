@@ -1,4 +1,17 @@
 <?php include 'includes/header.php'; ?>
+
+<style>
+h1{
+  margin-bottom: 0px;
+}
+.dp-page{
+  min-height: auto;
+  background: var(--brand--paper);
+}
+hr{
+  margin: 0px
+}
+</style>
 <main class="dp-page">
   <section class="pc">
     <div class="pc-copy">
@@ -10,8 +23,8 @@
         <i></i>
         <span id="lab">Order DP-000148</span>
       </div>
-      <h1 class="p-rv" style="--d:.1s">Payment complete</h1>
-      <p class="p-rv" style="--d:.15s">Your resources are in your library, and the invoice is under Orders whenever you need it.</p>
+      <h1 class="p-rv m-0" style="--d:.1s">Payment complete</h1>
+      <p class="p-rv m-0" style="--d:.15s">Your resources are in your library, and the invoice is under Orders whenever you need it.</p>
       <div class="pc-act p-rv" style="--d:.2s">
         <a href="account-library.html" class="p-btn p-b1">Go to your library</a>
         <a href="store.html" class="p-btn p-b2">Back to the store</a>

@@ -1,5 +1,5 @@
 .pc {
-  background: var(--paper);
+  background: var(--brand--paper);
   padding: calc(88 * var(--u)) 0 calc(104 * var(--u));
 }
 .pc-copy {
@@ -88,8 +88,9 @@
 }
 .pc-rows hr {
   border: 0;
-  height: 1px;
-  background: rgba(18, 18, 20, 0.1);
+  height: 1px;    
+  background: #121214;
+  opacity: 0.1;
   margin: 6px 0;
 }
 @media (max-width: 820px) {
@@ -117,6 +118,7 @@
     padding: 20px 28px;
     font-size: 17px;
     justify-content: center;
+    height: 60px;
   }
   .pc-win {
     width: auto;

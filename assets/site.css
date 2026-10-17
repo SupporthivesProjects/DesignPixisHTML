@@ -1,4 +1,5 @@
 /* DesignPixis site kit. AD569 v1.0. Shared by every page. */
+<<<<<<< HEAD
 @font-face {
   font-family: "Geist";
   font-weight: 400;
@@ -126,6 +127,31 @@ html.smooth #smooth {
   height: 100svh;
   overflow: hidden;
 }
+=======
+@font-face{font-family:"Geist";font-weight:400;font-style:normal;font-display:block;src:url(fonts/geist-400.woff2) format("woff2")}
+@font-face{font-family:"Geist";font-weight:500;font-style:normal;font-display:block;src:url(fonts/geist-500.woff2) format("woff2")}
+@font-face{font-family:"Geist";font-weight:600;font-style:normal;font-display:block;src:url(fonts/geist-600.woff2) format("woff2")}
+@font-face{font-family:"Geist Mono";font-weight:400;font-style:normal;font-display:block;src:url(fonts/geist-mono-400.woff2) format("woff2")}
+@font-face{font-family:"Geist Mono";font-weight:500;font-style:normal;font-display:block;src:url(fonts/geist-mono-500.woff2) format("woff2")}
+:root{--ink:#121214;--blue:#2E47E6;--blue-d:#1F33B8;--ground:#F5F4F0;--paper:#F5F4F0;--brand--paper:#F0F1F6;--pink:#E8336F;--green:#12A37A;--amber:#E9A21B;--ok:#47B147;--err:#DF3F3F;--line:rgba(18,18,20,.08);--line12:rgba(18,18,20,.12);--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper)}
+body{font-family:"Geist",system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+[hidden]{display:none!important}
+*:focus-visible{outline:2px solid var(--blue)!important;outline-offset:3px!important}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* page: everything below the hero, sized in u (1920 frame unit) */
+:root{--u:max(.6px,min(1px,calc(100vw / 1920)));--paper:#F5F4F0;--line:rgba(18,18,20,.08)}
+body{overflow-x:hidden}
+html.smooth body{overscroll-behavior:auto}
+html,body{background:var(--paper)}
+#smooth{position:relative;width:100%}
+html.smooth #smooth{position:fixed;left:0;top:0;will-change:transform}
+#hero{position:relative;height:100vh;height:100svh;overflow:hidden}
+>>>>>>> rahul
 
 .p-sec {
   padding: calc(104 * var(--u)) 0;
@@ -307,6 +333,14 @@ html.smooth #smooth {
   height: calc(14 * var(--u));
 }
 
+.p-b1:hover{
+  background: var(--brand-black, #121214);
+  color: #FFFFFF;
+}
+
+.p-b2:hover{
+  background: var(--brand-black, #121214);
+}
 /* wave clip targets */
 .js_clip,
 .js_wave {

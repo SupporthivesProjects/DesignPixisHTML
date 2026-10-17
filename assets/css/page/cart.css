@@ -1,5 +1,5 @@
 .fl-head {
-  background: var(--paper);
+  background: var(--brand--paper);
   padding: calc(72 * var(--u)) 0 0;
   text-align: center;
 }
@@ -73,7 +73,7 @@ a.fl-step:hover {
   display: none;
 }
 .fl-body {
-  background: var(--paper);
+  background: var(--brand--paper);
   padding: calc(48 * var(--u)) 0 calc(104 * var(--u));
 }
 .ct-sheet {
@@ -180,6 +180,7 @@ a.fl-step:hover {
 .ct-sum hr {
   border: 0;
   height: 1px;
+  opacity: 1 !important;
   background: rgba(18, 18, 20, 0.1);
 }
 .ct-sum .tot span {
@@ -194,6 +195,10 @@ a.fl-step:hover {
 }
 .ct-sum .p-btn {
   justify-content: center;
+  transition: background-color 0.3s ease;
+}
+.ct-sum .p-btn:hover{
+  background: var(--brand-black, #121214);
 }
 .ct-sum small {
   font-size: calc(13 * var(--u));
