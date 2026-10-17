@@ -34,6 +34,102 @@
     box-shadow: inset 0 0 0 1px #E9A21B !important;
 }
 
+.tirhak_modal2 {
+    display: flex;
+    width: 560px;
+    padding: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 16px;
+    background: var(--base-white, #FFF);
+    box-shadow: 0 16px 48px -8px rgba(18, 18, 20, 0.12);
+}
+
+.green_t {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    background: var(--base-success-green, #47B147);
+}
+
+.tirhak_modal2 h1 {
+    margin-bottom: 12px;
+    color: var(--brand-black, #121214);
+
+    /* heading / h4 */
+    font-family: Geist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 38.4px */
+    letter-spacing: -0.96px;
+}
+
+.tirhak_modal2 h2 {
+    color: var(--brand-black, #121214);
+
+    /* body / regular */
+    font-family: Geist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+    margin-bottom: 0px;
+    opacity: 0.52;
+}
+
+.modal_tirthakt {
+    display: flex;
+    max-width: 640px;
+    width: 100%;
+    padding: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 16px;
+    background: var(--base-white, #FFF);
+}
+
+.line_t {
+    height: 1px;
+    align-self: stretch;
+    background: var(--brand-black-10, rgba(18, 18, 20, 0.10));
+}
+
+.modal_tt {
+    color: var(--brand-black, #121214);
+
+    /* heading / h4 */
+    font-family: Geist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 38.4px */
+    letter-spacing: -0.96px;
+    margin-bottom: 6px;
+}
+
+.modal_pp {
+    color: var(--brand-black, #121214);
+
+    /* body / small */
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 22.5px */
+    opacity: 0.6;
+    margin-bottom: 0px;
+}
+
 @media only screen and (max-width: 700px) {
     .mobile_nonet {
         display: none;
@@ -57,6 +153,98 @@
         text-wrap: unset;
     }
 
+    .diff_radius_border {
+        border-radius: 0px !important;
+        border: 0px !important;
+    }
+
+    .tirhak_modal2 {
+        display: flex;
+        max-width: 327px;
+        width: 100%;
+        padding: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        border-radius: 16px;
+        background: var(--base-white, #FFF);
+        box-shadow: 0 16px 48px -8px rgba(18, 18, 20, 0.12);
+    }
+
+    .tirhak_modal2 h1 {
+        color: var(--brand-black, #121214);
+
+        /* heading / h5 */
+        font-family: Geist;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        /* 28.8px */
+        letter-spacing: -0.72px;
+    }
+
+    .tirhak_modal2 h2 {
+        color: var(--brand-black, #121214);
+
+        /* body / regular */
+        font-family: Geist;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 24px */
+    }
+
+    .tirhak_modal2 h2,
+    .tirhak_modal2 h1 {
+        text-wrap: unset;
+    }
+
+    .for_hundt {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal_tirthakt {
+        display: flex;
+        max-width: 327px;
+        width: 100%;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        border-radius: 16px;
+        background: var(--base-white, #FFF);
+    }
+
+    .modal_pp {
+        color: var(--brand-black, #121214);
+
+        /* body / small */
+        font-family: Geist;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 22.5px */
+        opacity: 0.6;
+    }
+
+    .modal_tt {
+        color: var(--brand-black, #121214);
+
+        /* heading / h4 */
+        font-family: Geist;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        /* 38.4px */
+        letter-spacing: -0.96px;
+        margin-bottom: 8px;
+    }
 }
 
 @media only screen and (min-width: 780px) and (max-width:991px) {}

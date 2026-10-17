@@ -1,797 +1,899 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignPixis</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/tg-icon.svg">
-    <link rel="stylesheet" href="assets/css/mainBase.css">
 
-    <link rel="stylesheet" href="assets/site.css">
-  </head>
-  <body>
-  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DesignPixis</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/tg-icon.svg">
+  <link rel="stylesheet" href="assets/css/mainBase.css">
+
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+
+<body>
+
   <div class="main-div">
     <header class="p-nav static show" id="pnav">
-        <div class="in">
-            <a href="index.html" class="lgo" aria-label="DesignPixis home">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 1l10 5.8v11.4L12 24 2 18.2V6.8z" fill="#fff" stroke="#121214" stroke-width="1.4" stroke-linejoin="round" />
-                    <path d="M12 12.6L22 6.8M12 12.6L2 6.8M12 12.6V24" stroke="#121214" stroke-width="1.4" />
-                    <path d="M12 1l10 5.8L12 12.6 2 6.8z" fill="#2E47E6" />
-                </svg><span>DesignPixis</span></a>
-                <nav aria-label="Main">
-                  <a href="store.html">Store</a>
-                  <a href="design-services.html">Design services</a>
-                  <a href="about.html">About</a>
-                  <a href="contact.html">Contact</a></nav>
-                <div class="r"><a href="sign-in.html" class="si">Sign in</a><a href="account-library.html" class="acct">Account</a><a href="cart.html" class="ct" id="navCart">Cart<b data-cart-count>0</b></a>
-                    <button class="mb" id="pmb" aria-expanded="false" aria-controls="dpmenu"><span class="bars"><i></i><i></i></span>Menu</button>
-                </div>
+      <div class="in">
+        <a href="index.html" class="lgo" aria-label="DesignPixis home">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 1l10 5.8v11.4L12 24 2 18.2V6.8z" fill="#fff" stroke="#121214" stroke-width="1.4"
+              stroke-linejoin="round" />
+            <path d="M12 12.6L22 6.8M12 12.6L2 6.8M12 12.6V24" stroke="#121214" stroke-width="1.4" />
+            <path d="M12 1l10 5.8L12 12.6 2 6.8z" fill="#2E47E6" />
+          </svg><span>DesignPixis</span></a>
+        <nav aria-label="Main">
+          <a href="store.html">Store</a>
+          <a href="design-services.html">Design services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a></nav>
+        <div class="r"><a href="sign-in.html" class="si">Sign in</a><a href="account-library.html"
+            class="acct">Account</a><a href="cart.html" class="ct" id="navCart">Cart<b data-cart-count>0</b></a>
+          <button class="mb" id="pmb" aria-expanded="false" aria-controls="dpmenu"><span
+              class="bars"><i></i><i></i></span>Menu</button>
         </div>
+      </div>
     </header>
     <div class="dp-menu" id="dpmenu" role="dialog" aria-modal="true" aria-label="Menu">
-        <div>
-            <div class="bar">
-                <a href="index.html" class="lgo" aria-label="DesignPixis home">
-                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M12 1l10 5.8v11.4L12 24 2 18.2V6.8z" fill="#fff" stroke="#121214" stroke-width="1.4" stroke-linejoin="round" />
-                        <path d="M12 12.6L22 6.8M12 12.6L2 6.8M12 12.6V24" stroke="#121214" stroke-width="1.4" />
-                        <path d="M12 1l10 5.8L12 12.6 2 6.8z" fill="#2E47E6" />
-                    </svg>
-                </a>
-                <div class="r"><a href="cart.html" class="ctm">Cart<b data-cart-count>0</b></a>
-                    <button class="x" id="pmx">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-                            <path d="M1 1l10 10M11 1L1 11" />
-                        </svg>Close</button>
-                </div>
-            </div>
-            <nav class="links" aria-label="Menu">
-                <a href="store.html"><small>01</small>Store</a>
-                <a href="design-services.html"><small>02</small>Design services</a>
-                <a href="about.html"><small>03</small>About</a>
-                <a href="faq.html"><small>04</small>FAQ</a>
-                <a href="contact.html"><small>05</small>Contact</a>
-            </nav>
-            <div class="cats"><small>Shop by category</small>
-                <div class="g">
-                    <a href="store.html?cat=ebooks">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                        </svg>E-books</a>
-                    <a href="store.html?cat=video">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="12" cy="12" r="10" />
-                            <polygon points="10 8 16 12 10 16 10 8" />
-                        </svg>Video courses</a>
-                    <a href="store.html?cat=software">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="m7 11 2-2-2-2" />
-                            <path d="M11 13h4" />
-                            <rect width="18" height="18" x="3" y="3" rx="2" />
-                        </svg>Software</a>
-                    <a href="store.html?cat=templates">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <rect width="7" height="7" x="3" y="3" rx="1" />
-                            <rect width="7" height="7" x="14" y="3" rx="1" />
-                            <rect width="7" height="7" x="14" y="14" rx="1" />
-                            <rect width="7" height="7" x="3" y="14" rx="1" />
-                        </svg>Templates</a>
-                    <a href="store.html?cat=audiobooks">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M2 10v3" />
-                            <path d="M6 6v11" />
-                            <path d="M10 3v18" />
-                            <path d="M14 8v7" />
-                            <path d="M18 5v13" />
-                            <path d="M22 10v3" />
-                        </svg>Audiobooks</a><a href="store.html" class="all">All resources</a></div>
+      <div>
+        <div class="bar">
+          <a href="index.html" class="lgo" aria-label="DesignPixis home">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 1l10 5.8v11.4L12 24 2 18.2V6.8z" fill="#fff" stroke="#121214" stroke-width="1.4"
+                stroke-linejoin="round" />
+              <path d="M12 12.6L22 6.8M12 12.6L2 6.8M12 12.6V24" stroke="#121214" stroke-width="1.4" />
+              <path d="M12 1l10 5.8L12 12.6 2 6.8z" fill="#2E47E6" />
+            </svg>
+          </a>
+          <div class="r"><a href="cart.html" class="ctm">Cart<b data-cart-count>0</b></a>
+            <button class="x" id="pmx">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M1 1l10 10M11 1L1 11" />
+              </svg>Close</button>
+          </div>
+        </div>
+        <nav class="links" aria-label="Menu">
+          <a href="store.html"><small>01</small>Store</a>
+          <a href="design-services.html"><small>02</small>Design services</a>
+          <a href="about.html"><small>03</small>About</a>
+          <a href="faq.html"><small>04</small>FAQ</a>
+          <a href="contact.html"><small>05</small>Contact</a>
+        </nav>
+        <div class="cats"><small>Shop by category</small>
+          <div class="g">
+            <a href="store.html?cat=ebooks">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>E-books</a>
+            <a href="store.html?cat=video">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="10 8 16 12 10 16 10 8" />
+              </svg>Video courses</a>
+            <a href="store.html?cat=software">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="m7 11 2-2-2-2" />
+                <path d="M11 13h4" />
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+              </svg>Software</a>
+            <a href="store.html?cat=templates">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect width="7" height="7" x="3" y="3" rx="1" />
+                <rect width="7" height="7" x="14" y="3" rx="1" />
+                <rect width="7" height="7" x="14" y="14" rx="1" />
+                <rect width="7" height="7" x="3" y="14" rx="1" />
+              </svg>Templates</a>
+            <a href="store.html?cat=audiobooks">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 10v3" />
+                <path d="M6 6v11" />
+                <path d="M10 3v18" />
+                <path d="M14 8v7" />
+                <path d="M18 5v13" />
+                <path d="M22 10v3" />
+              </svg>Audiobooks</a><a href="store.html" class="all">All resources</a></div>
         </div>
         <div class="stu">
-            <div>
-                <svg class="iso" viewBox="0 0 327 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                    <g stroke="#fff" stroke-width=".6" fill="none">
-                        <path d="M-200 0 L146 200" />
-                        <path d="M-200 200 L146 0" />
-                        <path d="M-172 0 L174 200" />
-                        <path d="M-172 200 L174 0" />
-                        <path d="M-144 0 L202 200" />
-                        <path d="M-144 200 L202 0" />
-                        <path d="M-116 0 L230 200" />
-                        <path d="M-116 200 L230 0" />
-                        <path d="M-88 0 L258 200" />
-                        <path d="M-88 200 L258 0" />
-                        <path d="M-60 0 L286 200" />
-                        <path d="M-60 200 L286 0" />
-                        <path d="M-32 0 L314 200" />
-                        <path d="M-32 200 L314 0" />
-                        <path d="M-4 0 L342 200" />
-                        <path d="M-4 200 L342 0" />
-                        <path d="M24 0 L370 200" />
-                        <path d="M24 200 L370 0" />
-                        <path d="M52 0 L398 200" />
-                        <path d="M52 200 L398 0" />
-                        <path d="M80 0 L426 200" />
-                        <path d="M80 200 L426 0" />
-                        <path d="M108 0 L454 200" />
-                        <path d="M108 200 L454 0" />
-                        <path d="M136 0 L482 200" />
-                        <path d="M136 200 L482 0" />
-                        <path d="M164 0 L510 200" />
-                        <path d="M164 200 L510 0" />
-                        <path d="M192 0 L538 200" />
-                        <path d="M192 200 L538 0" />
-                        <path d="M220 0 L566 200" />
-                        <path d="M220 200 L566 0" />
-                        <path d="M248 0 L594 200" />
-                        <path d="M248 200 L594 0" />
-                        <path d="M276 0 L622 200" />
-                        <path d="M276 200 L622 0" />
-                        <path d="M304 0 L650 200" />
-                        <path d="M304 200 L650 0" />
-                        <path d="M332 0 L678 200" />
-                        <path d="M332 200 L678 0" />
-                        <path d="M360 0 L706 200" />
-                        <path d="M360 200 L706 0" />
-                        <path d="M388 0 L734 200" />
-                        <path d="M388 200 L734 0" />
-                        <path d="M416 0 L762 200" />
-                        <path d="M416 200 L762 0" />
-                        <path d="M444 0 L790 200" />
-                        <path d="M444 200 L790 0" />
-                        <path d="M472 0 L818 200" />
-                        <path d="M472 200 L818 0" />
-                        <path d="M500 0 L846 200" />
-                        <path d="M500 200 L846 0" />
-                        <path d="M528 0 L874 200" />
-                        <path d="M528 200 L874 0" />
-                        <path d="M556 0 L902 200" />
-                        <path d="M556 200 L902 0" />
-                        <path d="M584 0 L930 200" />
-                        <path d="M584 200 L930 0" />
-                        <path d="M612 0 L958 200" />
-                        <path d="M612 200 L958 0" />
-                    </g>
-                </svg><small>THE STUDIO</small><b>Want it built for you?</b>
-                <p>Tell us what you need. We come back with a scope and a fixed price.</p><a href="design-services.html#brief" class="p-btn p-b3 p-bs">Send a brief</a></div>
+          <div>
+            <svg class="iso" viewBox="0 0 327 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g stroke="#fff" stroke-width=".6" fill="none">
+                <path d="M-200 0 L146 200" />
+                <path d="M-200 200 L146 0" />
+                <path d="M-172 0 L174 200" />
+                <path d="M-172 200 L174 0" />
+                <path d="M-144 0 L202 200" />
+                <path d="M-144 200 L202 0" />
+                <path d="M-116 0 L230 200" />
+                <path d="M-116 200 L230 0" />
+                <path d="M-88 0 L258 200" />
+                <path d="M-88 200 L258 0" />
+                <path d="M-60 0 L286 200" />
+                <path d="M-60 200 L286 0" />
+                <path d="M-32 0 L314 200" />
+                <path d="M-32 200 L314 0" />
+                <path d="M-4 0 L342 200" />
+                <path d="M-4 200 L342 0" />
+                <path d="M24 0 L370 200" />
+                <path d="M24 200 L370 0" />
+                <path d="M52 0 L398 200" />
+                <path d="M52 200 L398 0" />
+                <path d="M80 0 L426 200" />
+                <path d="M80 200 L426 0" />
+                <path d="M108 0 L454 200" />
+                <path d="M108 200 L454 0" />
+                <path d="M136 0 L482 200" />
+                <path d="M136 200 L482 0" />
+                <path d="M164 0 L510 200" />
+                <path d="M164 200 L510 0" />
+                <path d="M192 0 L538 200" />
+                <path d="M192 200 L538 0" />
+                <path d="M220 0 L566 200" />
+                <path d="M220 200 L566 0" />
+                <path d="M248 0 L594 200" />
+                <path d="M248 200 L594 0" />
+                <path d="M276 0 L622 200" />
+                <path d="M276 200 L622 0" />
+                <path d="M304 0 L650 200" />
+                <path d="M304 200 L650 0" />
+                <path d="M332 0 L678 200" />
+                <path d="M332 200 L678 0" />
+                <path d="M360 0 L706 200" />
+                <path d="M360 200 L706 0" />
+                <path d="M388 0 L734 200" />
+                <path d="M388 200 L734 0" />
+                <path d="M416 0 L762 200" />
+                <path d="M416 200 L762 0" />
+                <path d="M444 0 L790 200" />
+                <path d="M444 200 L790 0" />
+                <path d="M472 0 L818 200" />
+                <path d="M472 200 L818 0" />
+                <path d="M500 0 L846 200" />
+                <path d="M500 200 L846 0" />
+                <path d="M528 0 L874 200" />
+                <path d="M528 200 L874 0" />
+                <path d="M556 0 L902 200" />
+                <path d="M556 200 L902 0" />
+                <path d="M584 0 L930 200" />
+                <path d="M584 200 L930 0" />
+                <path d="M612 0 L958 200" />
+                <path d="M612 200 L958 0" />
+              </g>
+            </svg><small>THE STUDIO</small><b>Want it built for you?</b>
+            <p>Tell us what you need. We come back with a scope and a fixed price.</p><a
+              href="design-services.html#brief" class="p-btn p-b3 p-bs">Send a brief</a>
+          </div>
         </div>
-    </div>
-    <div class="bot"><a href="sign-in.html" class="p-btn p-b2 menu-si">Sign in</a><a href="account-library.html" class="p-btn p-b2 menu-acct" >Account</a><span>hello@designpixis.com</span></div>
+      </div>
+      <div class="bot"><a href="sign-in.html" class="p-btn p-b2 menu-si">Sign in</a><a href="account-library.html"
+          class="p-btn p-b2 menu-acct">Account</a><span>hello@designpixis.com</span></div>
     </div>
     <div class="dp-toast" id="dpToast" role="status" aria-live="polite">
-        <div class="hd">
-            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-                <circle cx="10" cy="10" r="10" fill="#47B147" />
-                <path d="M5.8 10.2l2.8 2.8 5.6-5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg><span>Added to cart</span>
-            <button class="x" aria-label="Close">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-                    <path d="M1 1l10 10M11 1L1 11" />
-                </svg>
-            </button>
-        </div>
-        <div class="it"><img alt="" src="assets/img/cover-001.jpg">
-            <div><b></b><small></small></div>
-        </div>
-        <hr>
-        <div class="sub"><span></span><b></b></div>
-        <div class="acts"><a href="cart.html" class="p-btn p-b2 p-bs">View cart</a><a href="checkout.html" class="p-btn p-b1 p-bs" data-checkout>Checkout</a></div>
+      <div class="hd">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="10" cy="10" r="10" fill="#47B147" />
+          <path d="M5.8 10.2l2.8 2.8 5.6-5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg><span>Added to cart</span>
+        <button class="x" aria-label="Close">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" aria-hidden="true">
+            <path d="M1 1l10 10M11 1L1 11" />
+          </svg>
+        </button>
+      </div>
+      <div class="it"><img alt="" src="assets/img/cover-001.jpg">
+        <div><b></b><small></small></div>
+      </div>
+      <hr>
+      <div class="sub"><span></span><b></b></div>
+      <div class="acts"><a href="cart.html" class="p-btn p-b2 p-bs">View cart</a><a href="checkout.html"
+          class="p-btn p-b1 p-bs" data-checkout>Checkout</a></div>
     </div>
     <div class="dp-pop" id="dpPop" aria-hidden="true">
-        <div class="card" role="dialog" aria-modal="true" aria-labelledby="dpPopH"></div>
+      <div class="card" role="dialog" aria-modal="true" aria-labelledby="dpPopH"></div>
     </div>
     <!-- invoice modal content, opened by the View invoice buttons -->
     <template id="inv-DP-000004">
-        <div><h3 id="dpPopH">Order DP-000004</h3><p>Placed on 12 October 2026 · 2 items</p></div>
-        <button type="button" class="od-x" aria-label="Close" data-pop-close><svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" /></svg></button>
-        <div class="od-ls">
-          <div class="od-l"><img src="assets/img/cover-001.jpg" alt=""><div><b>Vijay Learning Gutenberg</b><small>Video course</small></div><span>$100.26</span></div>
-          <div class="od-l"><img src="assets/img/cover-002.jpg" alt=""><div><b>Rahul Website Creation and Design</b><small>E-book</small></div><span>$30.53</span></div>
+      <div>
+        <h3 id="dpPopH">Order DP-000004</h3>
+        <p>Placed on 12 October 2026 · 2 items</p>
+      </div>
+      <button type="button" class="od-x" aria-label="Close" data-pop-close><svg width="14" height="14"
+          viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          aria-hidden="true">
+          <path d="M1 1l10 10M11 1L1 11" /></svg></button>
+      <div class="od-ls">
+        <div class="od-l"><img src="assets/img/cover-001.jpg" alt="">
+          <div><b>Vijay Learning Gutenberg</b><small>Video course</small></div><span>$100.26</span>
         </div>
-        <div class="od-sr"><span>Subtotal</span><b>$130.79</b></div>
-        <div class="od-sr"><span>Paid with</span><b>Visa ending 4242</b></div>
-        <hr>
-        <div class="od-tot"><span>Total</span><b>$130.79</b></div>
-        <div class="od-act"><a href="invoice.html?ref=DP-000004" class="p-btn p-b1">Open full invoice</a><button type="button" class="p-btn p-b2" data-pop-close>Close</button></div>
+        <div class="od-l"><img src="assets/img/cover-002.jpg" alt="">
+          <div><b>Rahul Website Creation and Design</b><small>E-book</small></div><span>$30.53</span>
+        </div>
+      </div>
+      <div class="od-sr"><span>Subtotal</span><b>$130.79</b></div>
+      <div class="od-sr"><span>Paid with</span><b>Visa ending 4242</b></div>
+      <hr>
+      <div class="od-tot"><span>Total</span><b>$130.79</b></div>
+      <div class="od-act"><a href="invoice.html?ref=DP-000004" class="p-btn p-b1">Open full invoice</a><button
+          type="button" class="p-btn p-b2" data-pop-close>Close</button></div>
     </template>
     <template id="inv-DP-000003">
-        <div><h3 id="dpPopH">Order DP-000003</h3><p>Placed on 28 September 2026 · 1 item</p></div>
-        <button type="button" class="od-x" aria-label="Close" data-pop-close><svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" /></svg></button>
-        <div class="od-ls">
-          <div class="od-l"><img src="assets/img/cover-003.jpg" alt=""><div><b>WP Video Focus</b><small>Software</small></div><span>$54.95</span></div>
+      <div>
+        <h3 id="dpPopH">Order DP-000003</h3>
+        <p>Placed on 28 September 2026 · 1 item</p>
+      </div>
+      <button type="button" class="od-x" aria-label="Close" data-pop-close><svg width="14" height="14"
+          viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          aria-hidden="true">
+          <path d="M1 1l10 10M11 1L1 11" /></svg></button>
+      <div class="od-ls">
+        <div class="od-l"><img src="assets/img/cover-003.jpg" alt="">
+          <div><b>WP Video Focus</b><small>Software</small></div><span>$54.95</span>
         </div>
-        <div class="od-sr"><span>Subtotal</span><b>$54.95</b></div>
-        <div class="od-sr"><span>Paid with</span><b>Visa ending 4242</b></div>
-        <hr>
-        <div class="od-tot"><span>Total</span><b>$54.95</b></div>
-        <div class="od-act"><a href="invoice.html?ref=DP-000003" class="p-btn p-b1">Open full invoice</a><button type="button" class="p-btn p-b2" data-pop-close>Close</button></div>
+      </div>
+      <div class="od-sr"><span>Subtotal</span><b>$54.95</b></div>
+      <div class="od-sr"><span>Paid with</span><b>Visa ending 4242</b></div>
+      <hr>
+      <div class="od-tot"><span>Total</span><b>$54.95</b></div>
+      <div class="od-act"><a href="invoice.html?ref=DP-000003" class="p-btn p-b1">Open full invoice</a><button
+          type="button" class="p-btn p-b2" data-pop-close>Close</button></div>
     </template>
     <template id="inv-DP-000002">
-        <div><h3 id="dpPopH">Order DP-000002</h3><p>Placed on 14 August 2026 · 1 item</p></div>
-        <button type="button" class="od-x" aria-label="Close" data-pop-close><svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" /></svg></button>
-        <div class="od-ls">
-          <div class="od-l"><img src="assets/img/cover-005.jpg" alt=""><div><b>Kickstart Genesis Framework WP Theme</b><small>Template</small></div><span>$37.84</span></div>
+      <div>
+        <h3 id="dpPopH">Order DP-000002</h3>
+        <p>Placed on 14 August 2026 · 1 item</p>
+      </div>
+      <button type="button" class="od-x" aria-label="Close" data-pop-close><svg width="14" height="14"
+          viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          aria-hidden="true">
+          <path d="M1 1l10 10M11 1L1 11" /></svg></button>
+      <div class="od-ls">
+        <div class="od-l"><img src="assets/img/cover-005.jpg" alt="">
+          <div><b>Kickstart Genesis Framework WP Theme</b><small>Template</small></div><span>$37.84</span>
         </div>
-        <div class="od-sr"><span>Subtotal</span><b>$37.84</b></div>
-        <div class="od-sr"><span>Paid with</span><b>Visa ending 4242</b></div>
-        <hr>
-        <div class="od-tot"><span>Total</span><b>$37.84</b></div>
-        <div class="od-act"><a href="invoice.html?ref=DP-000002" class="p-btn p-b1">Open full invoice</a><button type="button" class="p-btn p-b2" data-pop-close>Close</button></div>
+      </div>
+      <div class="od-sr"><span>Subtotal</span><b>$37.84</b></div>
+      <div class="od-sr"><span>Paid with</span><b>Visa ending 4242</b></div>
+      <hr>
+      <div class="od-tot"><span>Total</span><b>$37.84</b></div>
+      <div class="od-act"><a href="invoice.html?ref=DP-000002" class="p-btn p-b1">Open full invoice</a><button
+          type="button" class="p-btn p-b2" data-pop-close>Close</button></div>
     </template>
     <template id="inv-DP-000001">
-        <div><h3 id="dpPopH">Order DP-000001</h3><p>Placed on 2 July 2026 · 1 item</p></div>
-        <button type="button" class="od-x" aria-label="Close" data-pop-close><svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" /></svg></button>
-        <div class="od-ls">
-          <div class="od-l"><img src="assets/img/cover-065.jpg" alt=""><div><b>7 Step WordPress Setup Audio Video Series</b><small>Audiobook</small></div><span>$79.38</span></div>
+      <div>
+        <h3 id="dpPopH">Order DP-000001</h3>
+        <p>Placed on 2 July 2026 · 1 item</p>
+      </div>
+      <button type="button" class="od-x" aria-label="Close" data-pop-close><svg width="14" height="14"
+          viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          aria-hidden="true">
+          <path d="M1 1l10 10M11 1L1 11" /></svg></button>
+      <div class="od-ls">
+        <div class="od-l"><img src="assets/img/cover-065.jpg" alt="">
+          <div><b>7 Step WordPress Setup Audio Video Series</b><small>Audiobook</small></div><span>$79.38</span>
         </div>
-        <div class="od-sr"><span>Subtotal</span><b>$79.38</b></div>
-        <div class="od-sr"><span>Paid with</span><b>Visa ending 4242</b></div>
-        <hr>
-        <div class="od-tot"><span>Total</span><b>$79.38</b></div>
-        <div class="od-act"><a href="invoice.html?ref=DP-000001" class="p-btn p-b1">Open full invoice</a><button type="button" class="p-btn p-b2" data-pop-close>Close</button></div>
+      </div>
+      <div class="od-sr"><span>Subtotal</span><b>$79.38</b></div>
+      <div class="od-sr"><span>Paid with</span><b>Visa ending 4242</b></div>
+      <hr>
+      <div class="od-tot"><span>Total</span><b>$79.38</b></div>
+      <div class="od-act"><a href="invoice.html?ref=DP-000001" class="p-btn p-b1">Open full invoice</a><button
+          type="button" class="p-btn p-b2" data-pop-close>Close</button></div>
     </template>
-  
-  <style>
-    .lb-empty {
-      background: var(--paper);
-      border-radius: 16px;
-      padding: 80px 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 16px
-    }
 
-    .lb-empty .tile {
-      width: 56px;
-      height: 56px;
-      border-radius: 8px;
-      background: rgba(46, 71, 230, .08);
-      color: var(--blue);
-      display: grid;
-      place-items: center
-    }
-
-    .lb-empty h2 {
-      font-weight: 600;
-      font-size: 32px;
-      line-height: 1.2;
-      letter-spacing: -.03em
-    }
-
-    .lb-empty p {
-      max-width: 440px;
-      font-size: 16px;
-      line-height: 1.5;
-      color: rgba(18, 18, 20, .72)
-    }
-
-    .lb-empty .p-btn {
-      margin-top: 8px
-    }
-
-    @media (max-width:820px) {
+    <style>
       .lb-empty {
-        padding: 40px 24px;
-        align-items: flex-start;
-        text-align: left
+        background: var(--paper);
+        border-radius: 16px;
+        padding: 80px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px
+      }
+
+      .lb-empty .tile {
+        width: 56px;
+        height: 56px;
+        border-radius: 8px;
+        background: rgba(46, 71, 230, .08);
+        color: var(--blue);
+        display: grid;
+        place-items: center
       }
 
       .lb-empty h2 {
-        font-size: 24px
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 1.2;
+        letter-spacing: -.03em
       }
-    }
 
-    /* account family: header, sidebar, content (Figma accounts pages) */
-    [hidden] {
-      display: none !important
-    }
-
-    .ac-hd {
-      background: #fff
-    }
-
-    main.dp-page {
-      background: #fff
-    }
-
-    .ac-hd .dp-wrap {
-      padding-top: calc(72*var(--u));
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: calc(24*var(--u))
-    }
-
-    .ac-hd .t-lead {
-      max-width: calc(640*var(--u))
-    }
-
-    /* mainBase.css sets overflow hidden on html/body/section, which breaks the sticky sidebar.
-       With html left visible, body's overflow moves to the viewport, so body is no longer a
-       scroll container and sticky works (clip is the modern way, hidden is the Safari < 16 fallback) */
-    html {
-      overflow-x: visible
-    }
-
-    body {
-      overflow-x: hidden;
-      overflow-x: clip
-    }
-
-    /* the orders table is shorter than the sidebar, so give the column room to scroll past */
-    @media (min-width:821px) {
-      .ac-main {
-        min-height: calc(100vh - 96px)
+      .lb-empty p {
+        max-width: 440px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(18, 18, 20, .72)
       }
-    }
 
-    .ac-sec {
-      overflow: visible;
-      background: #fff;
-      padding: calc(56*var(--u)) 0 calc(104*var(--u))
-    }
+      .lb-empty .p-btn {
+        margin-top: 8px
+      }
 
-    .ac-main {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      min-width: 0
-    }
+      @media (max-width:820px) {
+        .lb-empty {
+          padding: 40px 24px;
+          align-items: flex-start;
+          text-align: left
+        }
 
-    .dp-side .who small {
-      opacity: .5
-    }
+        .lb-empty h2 {
+          font-size: 24px
+        }
+      }
 
-    .dp-side nav button {
-      width: 100%;
-      box-sizing: border-box
-    }
+      /* account family: header, sidebar, content (Figma accounts pages) */
+      [hidden] {
+        display: none !important
+      }
 
-    .dp-side nav a:focus-visible,
-    .dp-side nav button:focus-visible,
-    .dp-tabs a:focus-visible,
-    .dp-tabs button:focus-visible {
-      outline: 2px solid var(--blue);
-      outline-offset: 2px
-    }
+      .ac-hd {
+        background: #fff
+      }
 
-    .dp-tabs a:not(.cur):hover,
-    .dp-tabs button:hover {
-      border-color: var(--ink)
-    }
+      main.dp-page {
+        background: #fff
+      }
 
-    button.p-btn {
-      border: 0;
-      cursor: pointer;
-      font-family: inherit
-    }
-
-    .ac-dl {
-      padding: 10px 16px !important;
-      font-size: 14px !important
-    }
-
-    .dp-pop {
-      background: rgba(18, 18, 20, .8)
-    }
-
-    .dp-pop .card {
-      width: min(560px, 100%);
-      padding: 48px
-    }
-
-    .dp-pop .card.wide {
-      width: min(640px, 100%);
-      position: relative;
-      max-height: calc(100vh - 48px);
-      overflow-y: auto
-    }
-
-    @media (max-width:820px) {
       .ac-hd .dp-wrap {
-        padding-top: 40px;
-        gap: 24px
-      }
-
-      .ac-hd .t-lead {
-        font-size: 18px;
-        max-width: none
-      }
-
-      .ac-sec {
-        padding: 40px 0
-      }
-
-      .dp-acct {
-        gap: 32px
-      }
-
-      .ac-main {
-        gap: 16px
-      }
-
-      .dp-tabs {
-        margin: 0 -24px;
-        padding: 0 24px
-      }
-
-      .dp-pop .card {
-        padding: 32px
-      }
-
-      .dp-pop .card.wide {
-        padding: 24px;
-        gap: 16px
-      }
-    }
-  </style>
-  <style>
-    .od-h,
-    .od-r {
-      display: grid;
-      grid-template-columns: calc(200*var(--u)) calc(240*var(--u)) calc(160*var(--u)) calc(160*var(--u)) 1fr;
-      align-items: center;
-      border-bottom: 1px solid rgba(18, 18, 20, .1)
-    }
-
-    .od-h {
-      padding-bottom: 16px;
-      font: 400 11px/1.3 "Geist Mono", monospace;
-      letter-spacing: .02em;
-      text-transform: uppercase;
-      color: rgba(18, 18, 20, .5)
-    }
-
-    .od-h span:last-child,
-    .od-r>span:last-child,
-    .od-r .inv {
-      text-align: right;
-      justify-self: end
-    }
-
-    .od-r {
-      padding: 24px 0;
-      cursor: pointer;
-      transition: background .25s
-    }
-
-    .od-r:hover {
-      background: linear-gradient(90deg, transparent, rgba(245, 244, 240, .8) 8%, rgba(245, 244, 240, .8) 92%, transparent)
-    }
-
-    .od-r:focus-visible {
-      outline: 2px solid var(--blue);
-      outline-offset: 2px
-    }
-
-    .od-r .ref {
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 1.4
-    }
-
-    .od-r:hover .ref {
-      color: var(--blue)
-    }
-
-    .od-r .c {
-      font-size: 16px;
-      line-height: 1.5;
-      color: rgba(18, 18, 20, .72)
-    }
-
-    .od-r .inv {
-      all: unset;
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.4;
-      color: var(--blue)
-    }
-
-    .od-r .inv:hover {
-      text-decoration: underline;
-      text-underline-offset: 3px
-    }
-
-    .od-r .inv:focus-visible {
-      outline: 2px solid var(--blue);
-      outline-offset: 3px
-    }
-
-    /* order detail popup */
-    .od-x {
-      all: unset;
-      cursor: pointer;
-      position: absolute;
-      top: 44px;
-      right: 44px;
-      width: 28px;
-      height: 28px;
-      display: grid;
-      place-items: center;
-      border-radius: 6px
-    }
-
-    .od-x:hover {
-      background: var(--paper)
-    }
-
-    .od-x:focus-visible {
-      outline: 2px solid var(--blue)
-    }
-
-    .dp-pop .card.wide>div:first-of-type {
-      padding-right: 40px
-    }
-
-    .dp-pop .card.wide>div:first-of-type p {
-      margin-top: 6px;
-      font-size: 15px;
-      color: rgba(18, 18, 20, .6)
-    }
-
-    .dp-pop hr {
-      border: 0;
-      height: 1px;
-      background: rgba(18, 18, 20, .1);
-      flex: none
-    }
-
-    .od-ls {
-      display: flex;
-      flex-direction: column
-    }
-
-    .od-l {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(18, 18, 20, .1)
-    }
-
-    .od-l img {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-      object-fit: cover;
-      flex: none
-    }
-
-    .od-l div {
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 2px
-    }
-
-    .od-l b,
-    .od-sr b,
-    .od-l>span {
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 1.4
-    }
-
-    .od-l small {
-      font-size: 13px;
-      line-height: 1.4;
-      color: rgba(18, 18, 20, .6)
-    }
-
-    .od-sr {
-      display: flex;
-      justify-content: space-between;
-      align-items: center
-    }
-
-    .od-sr span {
-      font-size: 16px;
-      line-height: 1.5;
-      color: rgba(18, 18, 20, .72)
-    }
-
-    .od-tot {
-      display: flex;
-      justify-content: space-between;
-      align-items: center
-    }
-
-    .od-tot span {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 1.4
-    }
-
-    .od-tot b {
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 1.2;
-      letter-spacing: -.03em
-    }
-
-    .od-act {
-      display: flex;
-      gap: 16px
-    }
-
-    .od-act .p-btn {
-      align-self: auto
-    }
-
-    @media (max-width:820px) {
-      .od-h {
-        display: none
-      }
-
-      .od-r {
+        padding-top: calc(72*var(--u));
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 4px
+        gap: calc(24*var(--u))
+      }
+
+      .ac-hd .t-lead {
+        max-width: calc(640*var(--u))
+      }
+
+      /* mainBase.css sets overflow hidden on html/body/section, which breaks the sticky sidebar.
+       With html left visible, body's overflow moves to the viewport, so body is no longer a
+       scroll container and sticky works (clip is the modern way, hidden is the Safari < 16 fallback) */
+      html {
+        overflow-x: visible
+      }
+
+      body {
+        overflow-x: hidden;
+        overflow-x: clip
+      }
+
+      /* the orders table is shorter than the sidebar, so give the column room to scroll past */
+      @media (min-width:821px) {
+        /* .ac-main {
+        min-height: calc(100vh - 96px)
+      } */
+      }
+
+      .ac-sec {
+        overflow: visible;
+        background: #fff;
+        padding: calc(56*var(--u)) 0 calc(104*var(--u))
+      }
+
+      .ac-main {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        min-width: 0
+      }
+
+      .dp-side .who small {
+        opacity: .5
+      }
+
+      .dp-side nav button {
+        width: 100%;
+        box-sizing: border-box
+      }
+
+      .dp-side nav a:focus-visible,
+      .dp-side nav button:focus-visible,
+      .dp-tabs a:focus-visible,
+      .dp-tabs button:focus-visible {
+        outline: 2px solid var(--blue);
+        outline-offset: 2px
+      }
+
+      .dp-tabs a:not(.cur):hover,
+      .dp-tabs button:hover {
+        border-color: var(--ink)
+      }
+
+      button.p-btn {
+        border: 0;
+        cursor: pointer;
+        font-family: inherit
+      }
+
+      .ac-dl {
+        padding: 10px 16px !important;
+        font-size: 14px !important
+      }
+
+      .dp-pop {
+        background: rgba(18, 18, 20, .8)
+      }
+
+      .dp-pop .card {
+        width: min(560px, 100%);
+        padding: 48px
+      }
+
+      .dp-pop .card.wide {
+        width: min(640px, 100%);
+        position: relative;
+        max-height: calc(100vh - 48px);
+        overflow-y: auto
+      }
+
+      @media (max-width:820px) {
+        .ac-hd .dp-wrap {
+          padding-top: 40px;
+          gap: 24px
+        }
+
+        .ac-hd .t-lead {
+          font-size: 18px;
+          max-width: none
+        }
+
+        .ac-sec {
+          padding: 40px 0
+        }
+
+        .dp-acct {
+          gap: 32px
+        }
+
+        .ac-main {
+          gap: 32px
+        }
+
+        .dp-tabs {
+          margin: 0 -24px;
+          padding: 0 24px
+        }
+
+        .dp-pop .card {
+          padding: 32px
+        }
+
+        .dp-pop .card.wide {
+          padding: 24px;
+          gap: 16px
+        }
+      }
+    </style>
+    <style>
+      .od-h,
+      .od-r {
+        display: grid;
+        grid-template-columns: calc(200*var(--u)) calc(240*var(--u)) calc(160*var(--u)) calc(160*var(--u)) 1fr;
+        align-items: center;
+        border-bottom: 1px solid rgba(18, 18, 20, .1)
+      }
+
+      .od-h {
+        padding-bottom: 16px;
+        font: 400 11px/1.3 "Geist Mono", monospace;
+        letter-spacing: .02em;
+        text-transform: uppercase;
+        color: rgba(18, 18, 20, .5)
+      }
+
+      .od-h span:last-child,
+      .od-r>span:last-child,
+      .od-r .inv {
+        text-align: right;
+        justify-self: end
+      }
+
+      .od-r {
+        padding: 24px 0;
+        cursor: pointer;
+        transition: background .25s
+      }
+
+      .od-r:hover {
+        background: linear-gradient(90deg, transparent, rgba(245, 244, 240, .8) 8%, rgba(245, 244, 240, .8) 92%, transparent)
+      }
+
+      .od-r:focus-visible {
+        outline: 2px solid var(--blue);
+        outline-offset: 2px
+      }
+
+      .od-r .ref {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.4
+      }
+
+      .od-r:hover .ref {
+        color: var(--blue)
+      }
+
+      .od-r .c {
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(18, 18, 20, .72)
       }
 
       .od-r .inv {
-        justify-self: auto;
-        text-align: left;
-        margin-top: 4px
+        all: unset;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.4;
+        color: var(--blue)
       }
 
+      .od-r .inv:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px
+      }
+
+      .od-r .inv:focus-visible {
+        outline: 2px solid var(--blue);
+        outline-offset: 3px
+      }
+
+      /* order detail popup */
       .od-x {
-        top: 20px;
-        right: 20px
+        all: unset;
+        cursor: pointer;
+        position: absolute;
+        top: 44px;
+        right: 44px;
+        width: 28px;
+        height: 28px;
+        display: grid;
+        place-items: center;
+        border-radius: 6px
+      }
+
+      .od-x:hover {
+        background: var(--paper)
+      }
+
+      .od-x:focus-visible {
+        outline: 2px solid var(--blue)
       }
 
       .dp-pop .card.wide>div:first-of-type {
-        padding-right: 32px
+        padding-right: 40px
+      }
+
+      .dp-pop .card.wide>div:first-of-type p {
+        margin-top: 6px;
+        font-size: 15px;
+        color: rgba(18, 18, 20, .6)
+      }
+
+      .dp-pop hr {
+        border: 0;
+        height: 1px;
+        background: rgba(18, 18, 20, .1);
+        flex: none
+      }
+
+      .od-ls {
+        display: flex;
+        flex-direction: column
       }
 
       .od-l {
-        padding: 12px 0;
-        align-items: flex-start
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(18, 18, 20, .1)
+      }
+
+      .od-l img {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        object-fit: cover;
+        flex: none
+      }
+
+      .od-l div {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2px
+      }
+
+      .od-l b,
+      .od-sr b,
+      .od-l>span {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.4
+      }
+
+      .od-l small {
+        font-size: 13px;
+        line-height: 1.4;
+        color: rgba(18, 18, 20, .6)
+      }
+
+      .od-sr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+      }
+
+      .od-sr span {
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(18, 18, 20, .72)
+      }
+
+      .od-tot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+      }
+
+      .od-tot span {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.4
+      }
+
+      .od-tot b {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: -.03em
       }
 
       .od-act {
-        flex-direction: column;
-        gap: 12px
+        display: flex;
+        gap: 16px
       }
-    }
-  </style>
-  <main class="dp-page tirthak_fullt">
-    <section class="ac-hd">
-      <div class="dp-wrap"><span class="p-lab"><i></i>Your account</span>
-        <h1 class="t-h1">Orders</h1>
-        <p class="t-lead">Every order you have placed, with its invoice beside it.</p>
-      </div>
-    </section>
-    <section class="ac-sec">
-      <div class="dp-wrap dp-acct">
-        <aside class="dp-side diff_colort" aria-label="Account">
-          <div class="who"><small>Signed in as</small><b>John Smith</b><span
-             >john@example.com</span></div>
-          <hr style="margin: 0px;">
-          <nav><a href="account-library.html">Library</a><a href="account-orders.html" class="cur"
-              aria-current="page">Orders</a><a href="account-details.html">Account details</a><button type="button"
-              data-signout>Sign out</button></nav>
-        </aside>
-        <div class="ac-main">
-          <nav class="dp-tabs" aria-label="Account"><a href="account-library.html">Library</a><a
-              href="account-orders.html" class="cur" aria-current="page">Orders</a><a
-              href="account-details.html">Account details</a><button type="button" data-signout>Sign out</button></nav>
-          <div class="lb-empty od-empty diff_colort" id="odEmpty" >
-            <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M16 10a4 4 0 0 1-8 0" />
-                <path d="M3.1 6h17.8" />
-                <path d="M3.4 5.5 5 3h14l1.6 2.5A2 2 0 0 1 21 7v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 .4-1.5z" />
+
+      .od-act .p-btn {
+        align-self: auto
+      }
+
+      @media (max-width:820px) {
+        .od-h {
+          display: none
+        }
+
+        .od-r {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px
+        }
+
+        .od-r .inv {
+          justify-self: auto;
+          text-align: left;
+          margin-top: 4px
+        }
+
+        .od-x {
+          top: 20px;
+          right: 20px
+        }
+
+        .dp-pop .card.wide>div:first-of-type {
+          padding-right: 32px
+        }
+
+        .od-l {
+          padding: 12px 0;
+          align-items: flex-start
+        }
+
+        .od-act {
+          flex-direction: column;
+          gap: 12px
+        }
+      }
+    </style>
+    <main class="dp-page tirthak_fullt">
+      <section class="ac-hd">
+        <div class="dp-wrap"><span class="p-lab"><i></i>Your account</span>
+          <h1 class="t-h1">Orders</h1>
+          <p class="t-lead">Every order you have placed, with its invoice beside it.</p>
+        </div>
+      </section>
+      <section class="ac-sec">
+        <div class="dp-wrap dp-acct">
+          <aside class="dp-side diff_colort" aria-label="Account">
+            <div class="who"><small>Signed in as</small><b>John Smith</b><span>john@example.com</span></div>
+            <hr style="margin: 0px;">
+            <nav><a href="account-library.html">Library</a><a href="account-orders.html" class="cur"
+                aria-current="page">Orders</a><a href="account-details.html">Account details</a><button type="button"
+                data-signout>Sign out</button></nav>
+          </aside>
+          <div class="ac-main">
+            <nav class="dp-tabs" aria-label="Account"><a href="account-library.html">Library</a><a
+                href="account-orders.html" class="cur" aria-current="page">Orders</a><a
+                href="account-details.html">Account details</a><button type="button" data-signout>Sign out</button>
+            </nav>
+
+            <div class="od-t" role="table" aria-label="Orders">
+              <div class="od-h" role="row"><span role="columnheader">Order</span><span
+                  role="columnheader">Date</span><span role="columnheader">Items</span><span
+                  role="columnheader">Total</span><span role="columnheader">Invoice</span></div>
+              <div id="odRows" role="rowgroup">
+                <div class="od-r" role="row">
+                  <span class="ref" role="cell">DP-000004</span>
+                  <span class="c" role="cell">12 October 2026</span>
+                  <span class="c" role="cell">2 items</span>
+                  <span class="c" role="cell">$130.79</span>
+                  <span role="cell"><button type="button" class="inv" style="margin: 0px" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">View invoice</button></span>
+                </div>
+                <div class="od-r" role="row">
+                  <span class="ref" role="cell">DP-000003</span>
+                  <span class="c" role="cell">28 September 2026</span>
+                  <span class="c" role="cell">1 item</span>
+                  <span class="c" role="cell">$54.95</span>
+                  <span role="cell"><button type="button" class="inv" style="margin: 0px" data-invoice="DP-000003">View
+                      invoice</button></span>
+                </div>
+                <div class="od-r" role="row">
+                  <span class="ref" role="cell">DP-000002</span>
+                  <span class="c" role="cell">14 August 2026</span>
+                  <span class="c" role="cell">1 item</span>
+                  <span class="c" role="cell">$37.84</span>
+                  <span role="cell"><button type="button" class="inv" style="margin: 0px" data-invoice="DP-000002">View
+                      invoice</button></span>
+                </div>
+                <div class="od-r" role="row">
+                  <span class="ref" role="cell">DP-000001</span>
+                  <span class="c" role="cell">2 July 2026</span>
+                  <span class="c" role="cell">1 item</span>
+                  <span class="c" role="cell">$79.38</span>
+                  <span role="cell"><button type="button" class="inv" style="margin: 0px" data-invoice="DP-000001">View
+                      invoice</button></span>
+                </div>
+              </div>
+            </div>
+            <div class="lb-empty od-empty diff_colort different_stylest" id="odEmpty">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                  <path d="M3.1 6h17.8" />
+                  <path
+                    d="M3.4 5.5 5 3h14l1.6 2.5A2 2 0 0 1 21 7v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 .4-1.5z" />
                 </svg></span>
-            <h2>No orders yet</h2>
-            <p>When you buy from the store, each order and its invoice shows up here.</p>
-            <a href="store.html" class="p-btn p-b1">Browse the store</a>
-          </div>
-          <div class="od-t" role="table" aria-label="Orders">
-            <div class="od-h" role="row"><span role="columnheader">Order</span><span
-                role="columnheader">Date</span><span role="columnheader">Items</span><span
-                role="columnheader">Total</span><span role="columnheader">Invoice</span></div>
-            <div id="odRows" role="rowgroup">
-              <div class="od-r" role="row">
-                <span class="ref" role="cell">DP-000004</span>
-                <span class="c" role="cell">12 October 2026</span>
-                <span class="c" role="cell">2 items</span>
-                <span class="c" role="cell">$130.79</span>
-                <span role="cell"><button type="button" class="inv" data-invoice="DP-000004">View invoice</button></span>
-              </div>
-              <div class="od-r" role="row">
-                <span class="ref" role="cell">DP-000003</span>
-                <span class="c" role="cell">28 September 2026</span>
-                <span class="c" role="cell">1 item</span>
-                <span class="c" role="cell">$54.95</span>
-                <span role="cell"><button type="button" class="inv" data-invoice="DP-000003">View invoice</button></span>
-              </div>
-              <div class="od-r" role="row">
-                <span class="ref" role="cell">DP-000002</span>
-                <span class="c" role="cell">14 August 2026</span>
-                <span class="c" role="cell">1 item</span>
-                <span class="c" role="cell">$37.84</span>
-                <span role="cell"><button type="button" class="inv" data-invoice="DP-000002">View invoice</button></span>
-              </div>
-              <div class="od-r" role="row">
-                <span class="ref" role="cell">DP-000001</span>
-                <span class="c" role="cell">2 July 2026</span>
-                <span class="c" role="cell">1 item</span>
-                <span class="c" role="cell">$79.38</span>
-                <span role="cell"><button type="button" class="inv" data-invoice="DP-000001">View invoice</button></span>
-              </div>
+              <h2>No orders yet</h2>
+              <p>When you buy from the store, each order and its invoice shows up here.</p>
+              <a href="store.html" class="p-btn p-b1 for_margin_zerot">Browse the store</a>
             </div>
           </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered  modal-xl ">
+        <div class="modal-content modal_tirthakt mx-auto">
+          <div>
+            <h3 id="dpPopH" class="modal_tt">Order DP-000003</h3>
+            <p class="modal_pp">Placed on 28 September 2026 · 1 item</p>
+          </div>
+          <button type="button" class="od-x" aria-label="Close" data-pop-close=""><svg width="14" height="14"
+              viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              aria-hidden="true">
+              <path d="M1 1l10 10M11 1L1 11"></path>
+            </svg></button>
+          <div class="od-ls w-100">
+            <div class="od-l"><img src="assets/img/cover-003.jpg" alt="">
+              <div><b>WP Video Focus</b><small>Software</small></div><span>$54.95</span>
+            </div>
+          </div>
+          <div class="od-sr w-100"><span>Subtotal</span><b>$54.95</b></div>
+          <div class="od-sr w-100"><span>Discount (WELCOME10)</span><b>−$15.87</b></div>
+          <div class="line_t">
+
+          </div>
+          <div class="od-tot w-100"><span>Total</span><b>$54.95</b></div>
+          <div class="od-act for_hundt"><a href="invoice.html?ref=DP-000003" class="p-btn p-b1 for_hundt">Open full invoice</a><button
+              type="button" class="p-btn p-b2 for_hundt" data-pop-close="">Close</button></div>
+
         </div>
       </div>
-    </section>
-  </main>
-
-  
 
 
-<footer class="p-foot">
+      <footer class="p-foot">
         <div class="p-wrap">
-            <div class="p-ft">
-                <div class="p-brand">
-                    <a href="index.html" class="lg">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 1l10 5.8v11.4L12 24 2 18.2V6.8z" fill="#121214" stroke="#fff" stroke-width="1.4" stroke-linejoin="round" />
-                            <path d="M12 12.6L22 6.8M12 12.6L2 6.8M12 12.6V24" stroke="#fff" stroke-width="1.4" />
-                            <path d="M12 1l10 5.8L12 12.6 2 6.8z" fill="#2E47E6" />
-                        </svg>DesignPixis</a>
-                    <p>Design resources and a studio, from one place.</p><a href="mailto:hello@designpixis.com">hello@designpixis.com</a></div>
-                <div class="p-cols">
-                    <div class="p-col"><small>Store</small><a href="store.html?cat=ebooks">E-books</a><a href="store.html?cat=video">Video courses</a><a href="store.html?cat=software">Software</a><a href="store.html?cat=templates">Templates</a><a href="store.html?cat=audiobooks">Audiobooks</a></div>
-                    <div class="p-col"><small>Studio</small><a href="design-services.html#user-interface">User Interface</a><a href="design-services.html#user-experience">User Experience</a><a href="design-services.html#illustration">Illustration</a><a href="design-services.html#e-commerce">E-Commerce</a>
-                        <a
-                        href="design-services.html#ab-testing">AB Testing</a>
-                    </div>
-                    <div class="p-col"><small>Company</small><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
-                    <div class="p-col"><small>Legal</small><a href="terms.html">Terms and Conditions</a><a href="privacy.html">Privacy Policy</a></div>
-                </div>
+          <div class="p-ft">
+            <div class="p-brand">
+              <a href="index.html" class="lg">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 1l10 5.8v11.4L12 24 2 18.2V6.8z" fill="#121214" stroke="#fff" stroke-width="1.4"
+                    stroke-linejoin="round" />
+                  <path d="M12 12.6L22 6.8M12 12.6L2 6.8M12 12.6V24" stroke="#fff" stroke-width="1.4" />
+                  <path d="M12 1l10 5.8L12 12.6 2 6.8z" fill="#2E47E6" />
+                </svg>DesignPixis</a>
+              <p>Design resources and a studio, from one place.</p><a
+                href="mailto:hello@designpixis.com">hello@designpixis.com</a>
             </div>
-            <div class="p-fb">
-                <span>© 2026 DesignPixis. All rights reserved.</span>
-                <div class="p-util">
-                    <div class="p-cur" id="cur">
-                        <button aria-haspopup="listbox" aria-expanded="false"><span id="curL">USD $</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="m6 9 6 6 6-6" />
-                            </svg>
-                        </button>
-                        <ul role="listbox">
-                            <li class="sel" data-c="USD $">USD<span>$</span></li>
-                            <li data-c="EUR €">EUR<span>€</span></li>
-                            <li data-c="GBP £">GBP<span>£</span></li>
-                        </ul>
-                    </div>
-                    <div class="p-pay" aria-label="Visa and Mastercard"><span class="p-visa" role="img" aria-label="Visa"><svg viewBox="0 7.4 24 9.2" aria-hidden="true"><path fill="#fff" d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/></svg></span>
-                        <span
-                        class="p-mc"><i style="left:0;background:#EB001B"></i><i style="left:calc(12*var(--u));background:#F79E1B;opacity:.9"></i></span>
-                    </div>
-                </div>
+            <div class="p-cols">
+              <div class="p-col"><small>Store</small><a href="store.html?cat=ebooks">E-books</a><a
+                  href="store.html?cat=video">Video courses</a><a href="store.html?cat=software">Software</a><a
+                  href="store.html?cat=templates">Templates</a><a href="store.html?cat=audiobooks">Audiobooks</a></div>
+              <div class="p-col"><small>Studio</small><a href="design-services.html#user-interface">User Interface</a><a
+                  href="design-services.html#user-experience">User Experience</a><a
+                  href="design-services.html#illustration">Illustration</a><a
+                  href="design-services.html#e-commerce">E-Commerce</a>
+                <a href="design-services.html#ab-testing">AB Testing</a>
+              </div>
+              <div class="p-col"><small>Company</small><a href="about.html">About</a><a href="faq.html">FAQ</a><a
+                  href="contact.html">Contact</a></div>
+              <div class="p-col"><small>Legal</small><a href="terms.html">Terms and Conditions</a><a
+                  href="privacy.html">Privacy Policy</a></div>
             </div>
+          </div>
+          <div class="p-fb">
+            <span>© 2026 DesignPixis. All rights reserved.</span>
+            <div class="p-util">
+              <div class="p-cur" id="cur">
+                <button aria-haspopup="listbox" aria-expanded="false"><span id="curL">USD $</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <ul role="listbox">
+                  <li class="sel" data-c="USD $">USD<span>$</span></li>
+                  <li data-c="EUR €">EUR<span>€</span></li>
+                  <li data-c="GBP £">GBP<span>£</span></li>
+                </ul>
+              </div>
+              <div class="p-pay" aria-label="Visa and Mastercard"><span class="p-visa" role="img" aria-label="Visa"><svg
+                    viewBox="0 7.4 24 9.2" aria-hidden="true">
+                    <path fill="#fff"
+                      d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z" />
+                    </svg></span>
+                <span class="p-mc"><i style="left:0;background:#EB001B"></i><i
+                    style="left:calc(12*var(--u));background:#F79E1B;opacity:.9"></i></span>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
-</div>
+      </footer>
+    </div>
     <script src="assets/uiframe/js/jquery.min.js"></script>
     <script src="assets/uiframe/js/bootstrap.bundle.min.js"></script>
     <script src="assets/uiframe/js/popper.min.js"></script>
     <script src="assets/uiframe/js/slick.js"></script>
     <script src="assets/uiframe/js/owl.carousel.js"></script>
     <script src="assets/uiframe/js/swiper-bundle.min.js"></script>
-    <script src="assets/uiframe/js/flickity.pkgd.min.js"></script>   
+    <script src="assets/uiframe/js/flickity.pkgd.min.js"></script>
     <script src="assets/uiframe/js/aos.js"></script>
     <script src="assets/uiframe/js/home-js.js"></script>
     <script src="assets/catalogue.js"></script>
@@ -800,27 +902,27 @@
     <script src="assets/animation1.js"></script>
     <script>
       $(document).ready(function () {
-          $(".navbar-toggler").click(function () {
-              $(this).toggleClass("is-active");
-              $("header").toggleClass("header-is-active");
+        $(".navbar-toggler").click(function () {
+          $(this).toggleClass("is-active");
+          $("header").toggleClass("header-is-active");
 
-              let logo = $("#logo");
-              if (logo.attr("src") === "./img/logo.svg") {
-                  logo.attr("src", "./img/logo.svg");
-              } else {
-                  logo.attr("src", "./img/logo.svg");
-              }
-          });
+          let logo = $("#logo");
+          if (logo.attr("src") === "./img/logo.svg") {
+            logo.attr("src", "./img/logo.svg");
+          } else {
+            logo.attr("src", "./img/logo.svg");
+          }
+        });
       });
     </script>
     <script>
-      $('#filterid').on('click', function(event) {
-          $('#filterBox').slideToggle(300);
-          $('#filterBox').toggleClass('open');
-          event.preventDefault();
+      $('#filterid').on('click', function (event) {
+        $('#filterBox').slideToggle(300);
+        $('#filterBox').toggleClass('open');
+        event.preventDefault();
       });
-      $(document).ready(function(){
-        $("#filter-close").click(function(){
+      $(document).ready(function () {
+        $("#filter-close").click(function () {
           $("#filterBox").slideUp("slow");
         });
       });
@@ -828,27 +930,27 @@
         header.addEventListener("click", () => {
           const body = header.nextElementSibling;
 
-          body.classList.toggle("open");     // toggle body
+          body.classList.toggle("open"); // toggle body
           header.classList.toggle("active"); // toggle class on h3
         });
       });
     </script>
     <script>
       function selectCurrency(currency, flagSrc) {
-          const btn = document.getElementById("currencyBtn");
-          const flag = document.getElementById("currencyFlag");
-          btn.innerHTML = `${currency} <img id="currencyFlag" src="${flagSrc}" class="img-fluid">`;
+        const btn = document.getElementById("currencyBtn");
+        const flag = document.getElementById("currencyFlag");
+        btn.innerHTML = `${currency} <img id="currencyFlag" src="${flagSrc}" class="img-fluid">`;
       }
     </script>
     <script>
-      window.addEventListener('scroll', function() {
-          var content = document.querySelector('header');
-          var scrollPosition = window.scrollY;
-          if (scrollPosition > 10) {
-              content.classList.add("header-scroll")
-          } else {
-              content.classList.remove("header-scroll")
-          }
+      window.addEventListener('scroll', function () {
+        var content = document.querySelector('header');
+        var scrollPosition = window.scrollY;
+        if (scrollPosition > 10) {
+          content.classList.add("header-scroll")
+        } else {
+          content.classList.remove("header-scroll")
+        }
       });
     </script>
     <script>
@@ -858,20 +960,14 @@
 
 
 
-<script>
-  /* open the invoice modal for the clicked order */
-  document.getElementById('odRows').addEventListener('click', e => {
-    const b = e.target.closest('[data-invoice]');
-    if (!b) return;
-    const pop = document.getElementById('dpPop');
-    const card = pop.querySelector('.card');
-    card.className = 'card wide';
-    card.replaceChildren(document.getElementById('inv-' + b.dataset.invoice).content.cloneNode(true));
-    pop.classList.add('show');
-    pop.setAttribute('aria-hidden', 'false');
-    setTimeout(() => card.querySelector('.od-x').focus(), 50);
-  });
-</script>
+
 </body>
+
 </html>
-  
+
+
+
+
+
+
+
