@@ -165,7 +165,7 @@
     </div>
     <div class="bot"><a href="sign-in.html" class="p-btn p-b2 menu-si">Sign in</a><a href="account-library.html" class="p-btn p-b2 menu-acct" hidden>Account</a><span>hello@designpixis.com</span></div>
     </div>
-    <div class="dp-toast show" id="dpToast" role="status" aria-live="polite">
+    <div class="dp-toast show" id="dpToasted" role="status" aria-live="polite">
   <div class="hd">
     <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
       <circle cx="10" cy="10" r="10" fill="#47B147"></circle>
