@@ -89,7 +89,29 @@
         </div>
         <div class="dp-chips st-chips" id="chips" role="tablist" aria-label="Categories"></div>
       </div>
-      <div class="dp-grid st-grid" id="grid" aria-live="polite"></div>
+      <div class="dp-grid st-grid" id="grid" aria-live="polite">
+        <article class="dp-card p-rv on" style="--d:0.06s">
+          <div class="top">
+            <a href="product.html?id=002" class="cv" aria-label="Rahul Website Creation and Design">
+              <img src="assets/img/cover-002.jpg" alt="" loading="lazy">
+              <span class="dp-pill" style="background:#2E47E6;color:#FFFFFF">
+                <i></i>E-book
+              </span>
+            </a>
+            <div class="info">
+              <span class="k">E-book</span>
+              <a href="product.html?id=002" class="t">Rahul Website Creation and Design</a>
+              <p class="d">Choosing a website design that fits your brand and your goals.</p>
+            </div>
+          </div>
+          <div class="buy">
+            $30.53<button class="p-btn p-b2 p-bs dp-add px" data-add="002">
+            <span class="pg"></span><span>Add to cart</span>
+          </button>
+          </div>
+        </article>
+        
+      </div>
       <hr class="st-hr">
       <div class="st-pag">
         <span id="showing">Showing 15 of 113 resources</span>
