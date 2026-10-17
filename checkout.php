@@ -1,11 +1,12 @@
 <?php include 'includes/header.php'; ?>
 
 <style>
-h1{
+h1, h2, p{
   margin-bottom: 0px;
 }
 .dp-page{
   min-height: auto;
+  background: var(--brand--paper);
 }
 hr{
   margin: 0px

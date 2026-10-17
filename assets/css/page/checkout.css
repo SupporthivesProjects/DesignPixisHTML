@@ -140,6 +140,7 @@ a.fl-step:hover {
   border: 0;
   height: 1px;
   background: rgba(18, 18, 20, 0.1);
+  opacity: 1;
 }
 .co-disc {
   display: flex;
@@ -206,6 +207,7 @@ a.fl-step:hover {
   padding: calc(29 * var(--u)) calc(28 * var(--u));
   font-size: calc(17 * var(--u));
   justify-content: center;
+  height: 78px;
 }
 .co-note {
   font-size: calc(13 * var(--u));
