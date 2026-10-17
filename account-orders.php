@@ -52,7 +52,7 @@
         }
       }
 
-      /* account family: header, sidebar, content (Figma accounts pages) */
+      
       [hidden] {
         display: none !important
       }
@@ -77,9 +77,7 @@
         max-width: calc(640*var(--u))
       }
 
-      /* mainBase.css sets overflow hidden on html/body/section, which breaks the sticky sidebar.
-       With html left visible, body's overflow moves to the viewport, so body is no longer a
-       scroll container and sticky works (clip is the modern way, hidden is the Safari < 16 fallback) */
+    
       html {
         overflow-x: visible
       }
@@ -89,7 +87,7 @@
         overflow-x: clip
       }
 
-      /* the orders table is shorter than the sidebar, so give the column room to scroll past */
+      
       @media (min-width:821px) {
         /* .ac-main {
         min-height: calc(100vh - 96px)
