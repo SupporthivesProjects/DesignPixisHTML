@@ -154,6 +154,9 @@
     margin: 0px;
     background: var(--brand-black-10, rgba(18, 18, 20, 0.10));
 }
+.faq_out2 .fqstuck {
+    background: #F0F1F5;
+}
 
 
 @media only screen and (max-width: 600px) {
