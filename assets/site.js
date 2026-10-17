@@ -263,7 +263,9 @@
 
     function nextUrl(def) {
         const n = qs('next');
-        return n && /^[a-z0-9\-]+\.html(\?[\w=&%-]*)?$/i.test(n) ? n : def
+        return n && /^[a-z0-9_-]+\.(?:html|php)(?:\?[\w=&%-]*)?$/i.test(n)
+            ? n
+            : def;
     }
 
     /* product card */
