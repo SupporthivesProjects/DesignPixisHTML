@@ -162,37 +162,24 @@
     </div>
     <div class="bot"><a href="sign-in.html" class="p-btn p-b2 menu-si">Sign in</a><a href="account-library.html" class="p-btn p-b2 menu-acct" hidden>Account</a><span>hello@designpixis.com</span></div>
     </div>
-    <div class="dp-toast" id="dpToasted" role="status" aria-live="polite">
+    <div class="dp-toast" id="dpToast" role="status" aria-live="polite">
         <div class="hd">
             <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-            <circle cx="10" cy="10" r="10" fill="#47B147"></circle>
-            <path d="M5.8 10.2l2.8 2.8 5.6-5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-            <span>Added to cart</span>
+                <circle cx="10" cy="10" r="10" fill="#47B147" />
+                <path d="M5.8 10.2l2.8 2.8 5.6-5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg><span>Added to cart</span>
             <button class="x" aria-label="Close">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-                <path d="M1 1l10 10M11 1L1 11"></path>
-            </svg>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                    <path d="M1 1l10 10M11 1L1 11" />
+                </svg>
             </button>
         </div>
-        <div class="it">
-            <img alt="" src="assets/img/cover-002.jpg">
-            <div>
-            <b>Website Creation and Design</b>
-            <small>E-book · $30.53</small>
-            </div>
+        <div class="it"><img alt="" src="assets/img/cover-001.jpg">
+            <div><b></b><small></small></div>
         </div>
         <hr>
-        <div class="sub">
-            <span>Cart, 1 resource</span>
-            <b>$30.53</b>
-        </div>
-        <div class="acts">
-            <a href="cart.html" class="p-btn p-b2 p-bs px">
-            <span class="pg"></span>View cart </a>
-            <a href="checkout.html" class="p-btn p-b1 p-bs px" data-checkout="">
-            <span class="pg"></span>Checkout </a>
-        </div>
+        <div class="sub"><span></span><b></b></div>
+        <div class="acts"><a href="cart.html" class="p-btn p-b2 p-bs">View cart</a><a href="checkout.html" class="p-btn p-b1 p-bs" data-checkout>Checkout</a></div>
     </div>
     <div class="dp-pop" id="dpPop" aria-hidden="true">
         <div class="card" role="dialog" aria-modal="true" aria-labelledby="dpPopH"></div>
