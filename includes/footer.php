@@ -122,6 +122,7 @@
             a.href = a.getAttribute('href').split('?')[0] + q
         });
         const f = document.getElementById('f');
+        if (!f || !document.getElementById('name')) return;
         f.addEventListener('submit', e => {
             e.preventDefault();
             if (!DP.validate(f)) return;
@@ -202,6 +203,30 @@
 <!-- -----------------product-details---------------------- -->
  
  <!-- -----------cart------------------ -->
+
+ <!-- -----------forget------------------ -->
+<script>
+(function () {
+    const f = document.getElementById('f');
+    if (!f || document.getElementById('name')) return;
+
+    f.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!DP.validate(f)) return;
+
+        DP.popup({
+            heading: 'Reset link sent',
+            body: 'Check john@example.com for a link to choose a new password. The link works once.',
+            button: {
+                label: 'Back to sign in',
+                href: ''
+            }
+        });
+    });
+})();
+</script>
+<!-- -----------forget------------------ -->
 
 
 
