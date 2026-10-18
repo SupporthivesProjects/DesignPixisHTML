@@ -49,23 +49,9 @@
       </label>
       <div class="au-sub">
         <div class="dp-cap" tabindex="0" role="checkbox" aria-label="I am not a robot" data-required>
-          <div class="l">
-            <span class="b">
-              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M4 10.5l4 4 8-9" fill="none" stroke="#009E55" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>I'm not a robot
-          </div>
           <div class="r">
-            <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-              <path d="M16 3a13 13 0 0 1 12.6 9.8l-4 .1A9 9 0 0 0 16 7z" fill="#4A90E2" />
-              <path d="M29 16a13 13 0 0 1-9.8 12.6l-.1-4A9 9 0 0 0 25 16z" fill="#1C3AA9" />
-              <path d="M16 29a13 13 0 0 1-12.6-9.8l4-.1A9 9 0 0 0 16 25z" fill="#ABABAB" />
-              <path d="M3 16A13 13 0 0 1 12.8 3.4l.1 4A9 9 0 0 0 7 16z" fill="#4A90E2" />
-            </svg>
-            <span>reCAPTCHA</span>
-            <small>Privacy · Terms</small>
-          </div>
+                <img src="assets/img/reCAPTCHA.png" alt="reCAPTCHA">
+            </div>
         </div>
         <button class="p-btn p-b1" type="submit">Create account</button>
       </div>
