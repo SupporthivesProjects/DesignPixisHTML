@@ -2,8 +2,8 @@
 https://www.figma.com/design/2IG1e8jJGVfcB0NllHB9At<br>
 
 
-Start Date : 11/08/2026<br>
-End Date : 13/08/2026 (EOD) <br>
+Start Date : 16/09/2026<br>
+End Date : 19/09/2026 (EOD) <br>
 
 QA - Parth/Shailesh<br>
 

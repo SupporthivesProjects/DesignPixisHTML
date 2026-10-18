@@ -21,7 +21,7 @@
       <div class="dp-field">
         <label for="pw">Password</label>
         <div class="dp-in">
-          <input id="pw" name="pw" type="password" required data-min="8" placeholder="Your password" autocomplete="current-password">
+          <input id="pw" name="pw" type="password" required data-min="8" placeholder="••••••••••" autocomplete="current-password">
           <button type="button" class="eye" aria-label="Show password">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0" />

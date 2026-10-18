@@ -1,8 +1,19 @@
 <?php include 'includes/header.php'; ?>
+
+<style>
+  html,
+    body {
+      overflow-x: clip
+    }
+    .fqans.dp-sec {
+      overflow: visible;
+    }
+</style>
+
 <main class="fq">
   <section class="fqhero">
     <div class="iso" aria-hidden="true"></div>
-    <div class="dp-wrap">
+    <div class="dp-wrap faq_out">
       <div class="p-lab p-rv">
         <i></i>Before you buy
       </div>
@@ -15,7 +26,7 @@
     </div>
   </section>
   <section class="fqans dp-sec">
-    <div class="dp-wrap">
+    <div class="dp-wrap faq_out2">
       <aside class="fqtop" aria-label="Topics">
         <div class="p-lab">
           <i></i>Topics
@@ -185,4 +196,5 @@
     </div>
   </section>
 </main>
- <?php include 'includes/footer.php'; ?>
+
+<?php include 'includes/footer.php'; ?>

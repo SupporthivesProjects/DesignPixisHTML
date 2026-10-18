@@ -253,13 +253,13 @@
     };
 
     /* gate: checkout needs an account */
-    function requireAuth() {
-        if (!user.get()) {
-            location.replace('sign-in.html?next=' + encodeURIComponent(location.pathname.split('/').pop() + location.search));
-            return false
-        }
-        return true
-    }
+    // function requireAuth() {
+    //     if (!user.get()) {
+    //         location.replace('sign-in.html?next=' + encodeURIComponent(location.pathname.split('/').pop() + location.search));
+    //         return false
+    //     }
+    //     return true
+    // }
 
     function nextUrl(def) {
         const n = qs('next');
@@ -273,7 +273,7 @@
         const c = CATS[p.cat];
         const url = 'product.html?id=' + p.id;
         const own = cart.has(p.id);
-        return `<article class="dp-card p-rv" style="--d:${((i||0)%5*.06).toFixed(2)}s"><div class="top"><a href="${url}" class="cv" aria-label="${esc(p.name)}"><img src="${cover(p)}" alt="" loading="lazy">${pill(p)}</a><div class="info"><span class="k">${c.label}</span><a href="${url}" class="t">${esc(p.name)}</a><p class="d">${esc(p.short)}</p></div></div><div class="buy">${money(p.price)}<button class="p-btn p-b2 p-bs dp-add${own?' added':''}" data-add="${p.id}"><span>${own?'In cart':'Add to cart'}</span></button></div></article>`
+        // return `<article class="dp-card p-rv" style="--d:${((i||0)%5*.06).toFixed(2)}s"><div class="top"><a href="${url}" class="cv" aria-label="${esc(p.name)}"><img src="${cover(p)}" alt="" loading="lazy">${pill(p)}</a><div class="info"><span class="k">${c.label}</span><a href="${url}" class="t">${esc(p.name)}</a><p class="d">${esc(p.short)}</p></div></div><div class="buy">${money(p.price)}<button class="p-btn p-b2 p-bs dp-add${own?' added':''}" data-add="${p.id}"><span>${own?'In cart':'Add to cart'}</span></button></div></article>`
     }
     /* rotation: fill any number of slots with the five products */
     const rotate = (n, start = 0, list = CAT) => Array.from({

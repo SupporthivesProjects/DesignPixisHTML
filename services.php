@@ -1,4 +1,5 @@
 <?php include 'includes/header.php'; ?>
+
 <main class="ds">
   <section class="dshero">
     <div class="stage">
@@ -7,10 +8,10 @@
           <source media="(max-width:820px)" srcset="assets/img/services-hero-m.jpg">
           <img src="assets/img/services-hero.jpg" alt="A dark isometric studio desk with a monitor full of blue tiles, a phone, a keyboard and floating interface cards">
         </picture>
-        <video class="film" muted loop playsinline preload="metadata" data-src="films/services-hero.mp4" aria-hidden="true"></video>
+        <video class="film ds_vid" muted loop playsinline preload="metadata" data-src="films/services-hero.mp4" aria-hidden="true"></video>
       </div>
       <div class="dp-wrap">
-        <div class="cp">
+        <div class="cp ds_out">
           <div class="p-lab p-rv">
             <i></i>The studio
           </div>
@@ -29,7 +30,7 @@
     </div>
   </section>
   <section class="dssvc dp-sec">
-    <div class="dp-wrap">
+    <div class="dp-wrap ds_out2">
       <div class="p-ttl">
         <div class="p-lab p-rv">
           <i></i>What we design
@@ -160,7 +161,7 @@
       </div>
     </div>
   </section>
-  <section class="dscheck dp-sec" aria-labelledby="dsCheckH">
+  <section class="dscheck dp-sec ds_out3" aria-labelledby="dsCheckH">
     <div class="dp-wrap">
       <div class="cp">
         <div class="p-lab p-rv">
@@ -206,7 +207,7 @@
     </div>
   </section>
   <section class="dsbrief dp-sec" id="brief">
-    <div class="dp-wrap">
+    <div class="dp-wrap ds_out4">
       <div class="cp">
         <div class="p-lab p-rv">
           <i></i>Send a brief
@@ -309,10 +310,30 @@
               <small>Privacy · Terms</small>
             </div>
           </div>
-          <button type="submit" class="p-btn p-b1">Send brief</button>
+          <button type="button" class="p-btn p-b1" data-bs-toggle="modal" data-bs-target="#exampleModal">Send brief</button>
         </div>
       </form>
     </div>
   </section>
 </main>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content cont_modal">
+        <div class="cont_modal_tick">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" viewBox="0 0 25 18" fill="none">
+                <path d="M1.19922 9.19995L8.19922 16.2L23.1992 1.19995" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+            </svg>
+        </div>
+        <div class="cont_modal_div">
+            <h2 class="cont_modal_h2">Message sent</h2>
+            <p class="cont_modal_p">Thanks, John. We read every message and reply from hello@designpixis.com.</p>
+        </div>
+        <button type="button" class="p-btn p-b1" data-bs-toggle="modal">Back to the store</button>
+
+    </div>
+  </div>
+</div>
+
  <?php include 'includes/footer.php'; ?>

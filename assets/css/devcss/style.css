@@ -1,0 +1,207 @@
+@media (min-width: 821px) {
+    .p-nav nav {
+        height: calc(73 * var(--u));
+    }
+}
+.p-nav nav {
+    height: 73px;
+}
+header .p-nav {
+    background: var(--brand-white-82, rgba(255, 255, 255, 0.82));
+    backdrop-filter: blur(6px);
+}
+.p-nav nav {
+    display: flex;
+    gap: 4px;
+}
+.p-nav nav a{
+    color: var(--brand-black, #121214);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    opacity: 0.75;
+}
+.p-nav .right-side a{
+    color: var(--brand-black, #121214);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.p-nav .right-side a.acct{
+    color: var(--brand-black, #121214);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.p-nav .right-side a.ct{
+    color: var(--base-white, #FFF);
+    font-family: Geist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+.header{
+    height:  revert-rule;
+}
+.header .r .acct{
+    color: var(--brand-black, #121214);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.header .r .ct{
+    color: var(--base-white, #FFF);
+    font-family: Geist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    display: flex;
+    padding: 6px 6px 6px 16px;
+    align-items: center;
+    gap: 10px;
+}
+
+header .ct b{
+    color: var(--base-white, #FFF);
+    font-family: "Geist Mono";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.p-nav .ct b{
+    color: var(--base-white, #FFF);
+    font-family: "Geist Mono";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+.p-nav .r{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.lgo span{
+    color: var(--brand-black, #121214);
+    font-family: Geist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -0.4px;
+}
+.lgo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.lgo svg{
+    width: 24px;
+    height: 24px;
+}
+
+/* --------------------footer---------------------- */
+
+.p-brand p {
+    font-size: calc(15 * var(--u));
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+    width: calc(400 * var(--u));
+    color: var(--base-white, #FFF);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    opacity: .5;
+    margin-bottom: 0px;
+}
+.p-brand a {
+    font-weight: 500;
+    font-size: calc(15 * var(--u));
+    color: var(--base-white, #FFF);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.p-brand .lg {
+    display: flex;
+    align-items: center;
+    gap: calc(10 * var(--u));
+    font-weight: 600;
+    font-size: calc(20 * var(--u));
+    letter-spacing: -0.02em;
+    color: var(--base-white, #FFF);
+    font-family: Geist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -0.4px;
+}
+.p-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+.p-fb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: calc(80 * var(--u));
+    padding-top: calc(80 * var(--u));
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: calc(13 * var(--u));
+    color: rgba(255, 255, 255, 0.5);
+}
+.p-col small {
+    font: 500 calc(11 * var(--u)) "Geist Mono", monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    color: var(--base-white, #FFF);
+    font-family: "Geist Mono";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.88px;
+    text-transform: uppercase;
+    opacity: .45;
+}
+.p-foot .p-col a {
+    line-height: 1.5;
+    color: var(--base-white, #FFF);
+    font-family: Geist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.p-fb span{
+    color: var(--base-white, #FFF);
+    font-family: Geist;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    opacity: .5;
+}

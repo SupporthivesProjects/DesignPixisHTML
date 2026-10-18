@@ -1,0 +1,61 @@
+.au-ttl .t-h1{
+    margin: 0px;
+}
+
+.au-ttl .t-lead{
+    margin: 0px;
+    font-size: 20px;
+    color: #121214;
+}
+
+.au-col hr {
+        border: 1px solid rgba(18, 18, 20, 0.10);
+        margin: 0px;
+}
+
+.au-form .p-full{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.au-lk {
+    font-size: 16px;
+}
+
+.au-sw{
+    font-size: 16px;
+    margin: 0px;
+}
+
+@media (max-width: 735px) {
+    .au-ttl .t-lead{
+        font-size: 18px;
+    }
+}
+
+.dp-page .dp-in input:focus,
+.dp-page .dp-in select:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.dp-cap {
+    padding: 0px;
+}
+
+.au-sub .p-btn {
+    padding: 20px 28px !important;
+}
+
+.dp-pop h3{
+    color: #121214;
+    margin: 0px;
+}
+
+.dp-pop p{
+    margin-bottom: 0px;
+}
+
+.dp-pop .p-btn{
+    font-size: 17px;
+}
