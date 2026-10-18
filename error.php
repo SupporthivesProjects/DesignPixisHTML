@@ -1,14 +1,14 @@
 <?php include 'includes/header.php'; ?>
- <main class="dp-page nf">
+ <section class="dp-page nf" style="min-height:0vh">
   <div class="dp-wrap">
     <div class="nf-copy">
       <span class="p-lab">
         <i></i>Error 404 </span>
-      <h1 class="t-h1">Nothing selected.</h1>
-      <p class="t-lead">The page you were after has moved or never existed. The store and the studio are both still here.</p>
+      <h1 class="t-h1" style="margin:0px">Nothing selected.</h1>
+      <p class="t-lead" style="margin:0px">The page you were after has moved or never existed. The store and the studio are both still here.</p>
       <div class="nf-act">
-        <a href="store.html" class="p-btn p-b1">Go to the store</a>
-        <a href="index.html" class="p-btn p-b2">Back to the homepage</a>
+        <a href="store.html" class="p-btn p-b1" style="margin:0px">Go to the store</a>
+        <a href="index.html" class="p-btn p-b2" style="margin:0px">Back to the homepage</a>
       </div>
     </div>
     <svg class="nf-art" viewBox="0 0 640 440" role="img" aria-label="An empty selection box measuring zero by zero">
@@ -30,5 +30,5 @@
       </g>
     </svg>
   </div>
-</main>
+</section>
  <?php include 'includes/footer.php'; ?>
