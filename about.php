@@ -37,7 +37,7 @@
   </section>
   <section class="abstory dp-sec">
     <div class="dp-wrap row">
-      <div class="p-ttl">
+      <div class="p-ttl ab_second_left">
         <div class="p-lab p-rv">
           <i></i>Why we started
         </div>
@@ -50,7 +50,7 @@
           </span>
         </h2>
       </div>
-      <div class="bd">
+      <div class="bd ab_second_rgt">
         <p class="p-rv">DesignPixis started as the files we kept handing to clients: type scales, grid systems, starter templates, the odd video walkthrough. People kept asking where to buy them, so we put them in a store.</p>
         <p class="p-rv" style="--d:.1s">The studio came first and still runs alongside. The people who make the resources take on design work, so what you buy is what we use on real projects.</p>
       </div>
@@ -158,3 +158,17 @@
   </section>
 </main>
  <?php include 'includes/footer.php'; ?>
+ <script>
+  document.addEventListener("wheel", function (event) {
+    if (event.ctrlKey) return;
+
+    window.scrollBy({
+        top: event.deltaY,
+        left: 0,
+        behavior: "instant"
+    });
+}, {
+    passive: true,
+    capture: true
+});
+ </script>
