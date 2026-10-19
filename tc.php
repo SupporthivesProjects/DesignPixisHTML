@@ -1,9 +1,9 @@
 <?php include 'includes/header.php'; ?>
-    <main class="dp-page">
+    <main class="dp-page" style="min-height:0vh">
         <section class="lg-hd">
             <div class="dp-wrap"><span class="p-lab"><i></i>Legal</span>
-                <h1 class="t-h1">Terms<br> and Conditions</h1>
-                <p class="upd">Last updated 1 October 2026</p>
+                <h1 class="t-h1" style="margin:0px">Terms<br> and Conditions</h1>
+                <p class="upd" style="margin:0px">Last updated 1 October 2026</p>
             </div>
         </section>
         <section class="lg-sec">
